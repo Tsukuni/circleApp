@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'advices/index'
   resources :languages
   resources :words
   root to: 'home#index'
