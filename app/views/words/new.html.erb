@@ -1,0 +1,10 @@
+<%=form_for @words do |f| %>
+  <%= f.text_field :name %>
+  <%= f.number_field :veryEasy %>
+  <%= f.number_field :easy %>
+  <%= f.number_field :normal %>
+  <%= f.number_field :hard %>
+  <%= f.number_field :veryHard %>
+  <%= f.text_area :context %>
+  <%= f.submit "send" %>
+<% end %>
