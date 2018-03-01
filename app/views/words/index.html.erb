@@ -1,2 +1,9 @@
-<h1>Words#index</h1>
-<p>Find me in app/views/words/index.html.erb</p>
+<h1>第二言語</h1>
+<% @words.each do |obj| %>
+  <div>
+    <%= obj. %>
+    <%= link_to '編集',edit_word_path(obj.id)%>
+    <%= link_to '削除',word_path(obj.id),method: :delete%>
+  </div>
+<%end%>
+<%= link_to '新規作成',new_word_path%>
