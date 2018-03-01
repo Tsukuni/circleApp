@@ -1,0 +1,11 @@
+<h1>Languages#index</h1>
+  <% @languages.each do |obj| %>
+    <div>
+      <%= obj.context %>
+      <%= link_to '編集',edit_language_path(obj.id)%>
+      <%= link_to '削除',language_path(obj.id),method: :delete%>
+
+    </div>
+  <%end%>
+  <%= link_to '新規作成',new_language_url%>
+<p>Find me in app/views/languages/index.html.erb</p>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  veryEasy: 1
+  easy: 1
+  normal: 1
+  hard: 1
+  veryHard: 1
+  context: MyText
+
+two:
+  name: MyString
+  veryEasy: 1
+  easy: 1
+  normal: 1
+  hard: 1
+  veryHard: 1
+  context: MyText
