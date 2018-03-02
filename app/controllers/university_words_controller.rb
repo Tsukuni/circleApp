@@ -1,4 +1,5 @@
 class UniversityWordsController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_universityWord, only: [:show,:update,:edit,:destroy]
 
   #index->データの一覧の表示
@@ -66,5 +67,11 @@ class UniversityWordsController < ApplicationController
     def set_universityWord
     #特定データの取得
      @universityWords = UniversityWord.find(params[:id])
+    end
+
+    def login_check
+      if session[:user_id].nil?
+        redirect_to sessions_path
+      end
     end
 end

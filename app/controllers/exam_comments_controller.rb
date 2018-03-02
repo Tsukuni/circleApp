@@ -1,4 +1,5 @@
 class ExamCommentsController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_exam_comment, only: [:show, :edit, :update, :destroy]
 
   # GET /exam_comments
@@ -70,5 +71,10 @@ class ExamCommentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def exam_comment_params
       params.require(:exam_comment).permit(:context)
+    end
+    def login_check
+      if session[:user_id].nil?
+        redirect_to sessions_path
+      end
     end
 end

@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_word, only: [:show,:update,:edit,:destroy]
 
 #index->データの一覧の表示
@@ -66,5 +67,10 @@ end
 def set_word
 #特定データの取得
  @words = Word.find(params[:id])
+end
+def login_check
+  if session[:user_id].nil?
+    redirect_to sessions_path
+  end
 end
 end

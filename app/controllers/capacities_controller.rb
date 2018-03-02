@@ -1,4 +1,5 @@
 class CapacitiesController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_capacity, only: [:show, :edit, :update, :destroy]
 
   # GET /capacities
@@ -70,5 +71,10 @@ class CapacitiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def capacity_params
       params.require(:capacity).permit(:image, :context)
+    end
+    def login_check
+      if session[:user_id].nil?
+        redirect_to sessions_path
+      end
     end
 end

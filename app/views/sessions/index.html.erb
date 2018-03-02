@@ -1,0 +1,5 @@
+<% if current_user.nil? %>
+  <%= link_to "ログイン", new_session_path %>
+<% else %>
+  <%= link_to "ログアウト", session_path(current_user.id), method: :delete, data: { confirm: 'ログアウトしますか？' } %>
+<% end %>
