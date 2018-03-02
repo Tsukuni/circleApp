@@ -1,4 +1,5 @@
 class UniversityWordsController < ApplicationController
+  layout 'admin'
   before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_universityWord, only: [:show,:update,:edit,:destroy]
 

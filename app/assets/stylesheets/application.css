@@ -13,3 +13,112 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+body{
+  padding:0;
+  margin:0;
+  background-color:#EAEAE0
+}
+/*管理ページ*/
+
+/*header*/
+
+#adminheader{
+  display:table;
+  width:100vw;
+}
+#adminheader:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#admintitle{
+  display:block;
+  color:white;
+  font-size: 20px;
+  width:20%;
+  background-color:#00336D;
+  height:50px;
+  text-align: center;
+  line-height: 50px;
+  float:left;
+}
+#adminbar{
+  display:block;
+  background-color:#00336D;
+  width:80%;
+  height:50px;
+  float:left;
+}
+
+/*menu*/
+#adminMenu{
+  display:block;
+  height:calc(100vh - 50px) ;
+  width:20%;
+  background-color: white;
+  float:left;
+  overflow: hidden
+}
+
+.blank{
+  display:block;
+  height:20px;
+}
+
+#adminMenu ul{
+  color:#00336D;
+  list-style: none;
+  font-size:16px;
+}
+#adminMenu li{
+  margin-bottom:15px;
+}
+
+#adminMenu div{
+  font-size:15px;
+  line-height:30px;
+}
+
+#adminMenu ul li ul li:first-child{
+  margin-top:15px;
+}
+
+#adminMenu a:hover{
+  background-color:#444444;
+}
+#adminMenu div span a{
+  padding-left: 20px;
+  display:block;
+  height:35px;
+  width:100%;
+  text-decoration: none
+}
+#adminMenu a{
+  padding-left: 40px;
+  display:block;
+  height:35px;
+  width:100%;
+  text-decoration: none
+}
+.title{
+  padding-left:20px;
+}
+
+
+/*mainpage*/
+#adminpage:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+#adminMain{
+  display:block;
+  height:calc(100vh - 50px);
+  width:80%;
+  float:left;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>管理ページ</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="adminheader">
+      <div id="admintitle">管理ページ</div>
+      <div id="adminbar"></div>
+    </div>
+    <div id="adminpage">
+      <div id="adminMenu">
+        <div class="blank"></div>
+        <div class="title">先輩からのアドバイス</div>
+        <div><%=link_to '資格・就活'%></div>
+        <div><%=link_to '第二言語'%></div>
+        <div><%=link_to '大学生の用語集'%></div>
+        <div><%=link_to 'テスト'%></div>
+        <div><%=link_to '新歓期の過ごし方'%></div>
+        <div><%=link_to '恋愛事情'%></div>
+        <div class="title">スナップ</div>
+        <div><%=link_to 'Men'%></div>
+        <div><%=link_to 'Women'%></div>
+        <div class="title">ランキング</div>
+        <div><%=link_to 'サークル・クラブ'%></div>
+        <div><%=link_to 'バイト'%></div>
+        <div><%=link_to 'ファッション'%></div>
+        <div><%=link_to '学校'%></div>
+        <div><%=link_to '旅行'%></div>
+        <div><span><%=link_to 'MAP'%></span></div>
+        <div><span><%=link_to '新歓企画'%></span></div>
+      </div>
+      <div id="adminMain">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
