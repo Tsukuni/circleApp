@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rank1:</strong>
+  <%= @campus_rank.rank1 %>
+</p>
+
+<p>
+  <strong>Rank2:</strong>
+  <%= @campus_rank.rank2 %>
+</p>
+
+<p>
+  <strong>Rank3:</strong>
+  <%= @campus_rank.rank3 %>
+</p>
+
+<%= link_to 'Edit', edit_campus_rank_path(@campus_rank) %> |
+<%= link_to 'Back', campus_ranks_path %>

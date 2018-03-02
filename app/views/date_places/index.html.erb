@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Date Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Context</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @date_places.each do |date_place| %>
+      <tr>
+        <td><%= date_place.name %></td>
+        <td><%= date_place.url %></td>
+        <td><%= date_place.context %></td>
+        <td><%= date_place.image %></td>
+        <td><%= link_to 'Show', date_place %></td>
+        <td><%= link_to 'Edit', edit_date_place_path(date_place) %></td>
+        <td><%= link_to 'Destroy', date_place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Date Place', new_date_place_path %>

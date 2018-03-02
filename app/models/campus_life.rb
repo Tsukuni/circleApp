@@ -1,0 +1,2 @@
+class CampusLife < ApplicationRecord
+end

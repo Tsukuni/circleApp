@@ -1,0 +1,2 @@
+module CampusLivesHelper
+end

@@ -1,0 +1,37 @@
+<%= form_with(model: date_place, local: true) do |form| %>
+  <% if date_place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(date_place.errors.count, "error") %> prohibited this date_place from being saved:</h2>
+
+      <ul>
+      <% date_place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :date_place_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :date_place_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :context %>
+    <%= form.text_area :context, id: :date_place_context %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :date_place_image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

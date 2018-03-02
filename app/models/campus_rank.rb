@@ -1,0 +1,2 @@
+class CampusRank < ApplicationRecord
+end
