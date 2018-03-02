@@ -1,0 +1,2 @@
+class ExamComment < ApplicationRecord
+end

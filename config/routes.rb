@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :exam_comments
+  resources :exams
   resources :campus_ranks
   resources :campus_lives
   resources :capacities
