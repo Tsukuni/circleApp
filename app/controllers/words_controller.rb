@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+  layout 'admin'
   before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_word, only: [:show,:update,:edit,:destroy]
 
@@ -25,7 +26,7 @@ def create
  #saveメソッドでデータをセーブ　*newメソッド + saveメソッド = createメソッド
  if @words.save
    #saveが完了したら、一覧ページへリダイレクト
-   redirect_to words_path
+   redirect_to languages_path
  else
    #saveを失敗すると新規作成ページへ
    render 'new'
@@ -42,7 +43,7 @@ def update
  #編集データの取得
  if @words.update(word_params)
    #updateが完了したら一覧ページへリダイレクト
-   redirect_to words_path
+   redirect_to languages_path
  else
    #updateを失敗すると編集ページへ
    render 'edit'
@@ -54,7 +55,7 @@ def destroy
  #データの削除
   @words.destroy
  #一覧ページへリダイレクト
- redirect_to words_path
+ redirect_to languages_path
 end
 
 private

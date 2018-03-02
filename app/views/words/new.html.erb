@@ -1,10 +1,11 @@
+<h3>第二言語新規作成</h3>
 <%=form_for @words do |f| %>
-  <%= f.text_field :name %>
-  <%= f.number_field :veryEasy %>
-  <%= f.number_field :easy %>
-  <%= f.number_field :normal %>
-  <%= f.number_field :hard %>
-  <%= f.number_field :veryHard %>
-  <%= f.text_area :context %>
-  <%= f.submit "send" %>
+  <div class="col-md-12 wordBottom">言語名:<%= f.text_field :name ,class:"form-control"%></div>
+  <div class="col-md-2 wordBottom">すごく簡単:<%= f.number_field :veryEasy, class:"form-control"%></div>
+  <div class="col-md-2 wordBottom">簡単:<%= f.number_field :easy, class:"form-control" %></div>
+  <div class="col-md-2 wordBottom">普通:<%= f.number_field :normal, class:"form-control" %></div>
+  <div class="col-md-2 wordBottom">難しい:<%= f.number_field :hard, class:"form-control" %></div>
+  <div class="col-md-2 wordBottom">すごく難しい:<%= f.number_field :veryHard, class:"form-control" %></div>
+  <div class="col-md-12 wordBottom">おすすめポイント:<%= f.text_area :context, class:"form-control" %></div>
+  <div class="col-md-12 wordBottom"><%= f.submit "送信",class: "btn"%></div>
 <% end %>

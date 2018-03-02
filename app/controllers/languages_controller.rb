@@ -1,4 +1,5 @@
 class LanguagesController < ApplicationController
+  layout 'admin'
   before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_language, only: [:show,:update,:edit,:destroy]
 
@@ -6,6 +7,7 @@ class LanguagesController < ApplicationController
 def index
  #mythreadのデータの全件取得
  @languages = Language.all
+ @words = Word.all
 end
 #show->個別データの表示
 def show

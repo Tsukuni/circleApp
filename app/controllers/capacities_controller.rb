@@ -1,4 +1,5 @@
 class CapacitiesController < ApplicationController
+  layout 'admin'
   before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_capacity, only: [:show, :edit, :update, :destroy]
 
