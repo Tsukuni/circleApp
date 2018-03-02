@@ -7,6 +7,7 @@ class UniversityWordsController < ApplicationController
   def index
    #mythreadのデータの全件取得
    @universityWords = UniversityWord.all
+   @introduceUniversityWords = IntroduceUniversityWord.all
   end
   #show->個別データの表示
   def show

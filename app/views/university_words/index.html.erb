@@ -1,9 +1,27 @@
-<h1>大学生の用語集ランキング</h1>
-<% @universityWords.each do |obj| %>
-  <div>
-    <%= obj.id %>
-    <%= link_to '編集',edit_university_word_path(obj.id)%>
-    <%= link_to '削除',university_word_path(obj.id),method: :delete%>
-  </div>
-<%end%>
-<%= link_to '新規作成',new_university_word_path%>
+<h3>大学生の用語集</h3>
+<div id="WordRank">
+  <h4>よく使われる用語</h4>
+  <% @universityWords.each do |obj| %>
+      <div>1位:<%= obj.rank1 %>
+        <span class="button"><%= link_to '削除',university_word_path(obj.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_university_word_path(obj.id)%></span>
+      </div>
+      <div>2位:<%= obj.rank2 %></div>
+      <div>3位:<%= obj.rank3 %></div>
+  <%end%>
+  <%= link_to '新規作成',new_university_word_path%>
+</div>
+<div id="WordExample">
+  <h4>用語説明</h4>
+  <% @introduceUniversityWords.each do |obj| %>
+    <div class="Language">
+      <div>用語名:<%= obj.title %>
+        <span class="button"><%= link_to '削除',introduce_university_word_path(obj.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_introduce_university_word_path(obj.id)%></span>
+      </div>
+      <div>意味:<%= obj.meaning %></div>
+      <div>例文:<%= obj.example %></div>
+    </div>
+  <%end%>
+  <%= link_to '新規作成',new_introduce_university_word_path%>
+</div>
