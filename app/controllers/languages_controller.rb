@@ -7,6 +7,7 @@ class LanguagesController < ApplicationController
 def index
  #mythreadのデータの全件取得
  @languages = Language.all
+ @words = Word.all
 end
 #show->個別データの表示
 def show

@@ -17,7 +17,7 @@
         <div class="blank"></div>
         <div class="title">先輩からのアドバイス</div>
         <div><%=link_to '資格・就活'%></div>
-        <div><%=link_to '第二言語'%></div>
+        <div><%=link_to '第二言語',languages_path%></div>
         <div><%=link_to '大学生の用語集'%></div>
         <div><%=link_to 'テスト'%></div>
         <div><%=link_to '新歓期の過ごし方'%></div>
@@ -35,7 +35,9 @@
         <div><span><%=link_to '新歓企画'%></span></div>
       </div>
       <div id="adminMain">
-        <%= yield %>
+        <div id="adminBox">
+          <%= yield %>
+        </div>
       </div>
     </div>
   </body>

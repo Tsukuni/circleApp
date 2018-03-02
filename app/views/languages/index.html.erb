@@ -1,11 +1,26 @@
-<h1>Languages#index</h1>
+<h3>第二言語</h3>
+<div id="secondLanguage">
+  <h4>第二言語とは・・・</h4>
   <% @languages.each do |obj| %>
-    <div>
-      <%= obj.context %>
-      <%= link_to '編集',edit_language_path(obj.id)%>
-      <%= link_to '削除',language_path(obj.id),method: :delete%>
-
+      <span class="text"><%= obj.context %></span>
+      <span class="button"><%= link_to '削除',language_path(obj.id),method: :delete%></span>
+      <span class="button"><%= link_to '編集',edit_language_path(obj.id)%></span>
+  <%end%>
+  <div><%= link_to '新規作成',new_language_url%></div>
+</div>
+<div id="Language">
+  <h4>第二言語ランキング</h4>
+  <% @words.each do |obj| %>
+    <div class="Language">
+      <p>言語:<%= obj.name %><span class="button"><%= link_to '削除',word_path(obj.id),method: :delete%></span>
+      <span class="button"><%= link_to '編集',edit_word_path(obj.id)%></span></p>
+      <span class="diff">すごく簡単:<%= obj.veryEasy %>%</span>
+      <span class="diff">簡単:<%= obj.easy %>%</span>
+      <span class="diff">普通:<%= obj.normal %>%</span>
+      <span class="diff">難しい:<%= obj.hard %>%</span>
+      <span class="diff">すごく難しい:<%= obj.veryHard %>%</span>
+      <p>おすすめポイント:<%= obj.context %></p>
     </div>
   <%end%>
-  <%= link_to '新規作成',new_language_url%>
-<p>Find me in app/views/languages/index.html.erb</p>
+  <%= link_to '新規作成',new_word_path%>
+</div>

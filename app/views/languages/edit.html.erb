@@ -1,6 +1,11 @@
-<h1>Languages#edit</h1>
-<%=form_for @languages do |f| %>
-  <%= f.text_field :context %>
-  <%= f.submit "send" %>
-<% end %>
-<p>Find me in app/views/languages/edit.html.erb</p>
+<div class="col-md-12">
+  <h3>第二言語とは・・・</h3>
+</div>
+<div>
+  <%=form_for @languages do |f| %>
+    <div class="col-md-6">
+      <%= f.text_field :context, class: "form-control"%>
+    </div>
+    <%= f.submit "送信" ,class: "btn" %>
+  <% end %>
+</div>

@@ -1,3 +1,42 @@
 // Place all the styles related to the languages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#secondLanguage{
+  padding:10px;
+  margin-bottom:10px;
+  background-color: white;
+}
+
+#Language{
+  padding:10px;
+  background-color: white;
+}
+
+.field{
+  width:200px;
+}
+
+.submitButton{
+  font-size: 20px;
+  width:30px;
+  height:15px;
+}
+
+.Language{
+  border-top:dashed;
+  border-color:#00336D;
+}
+
+
+.text{
+  font-size: 20px;
+}
+
+.button{
+  font-size: 20px;
+  float:right;
+  padding-right: 10px;
+}
+a{
+  text-decoration: none;
+}
