@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /usr/local/Cellar/ruby/2.5.0/include/ruby-2.5.0
+topdir = /Users/kentatsukuni/.rbenv/versions/2.4.1/include/ruby-2.4.0
 hdrdir = $(topdir)
-arch_hdrdir = /usr/local/Cellar/ruby/2.5.0/include/ruby-2.5.0/x86_64-darwin16
+arch_hdrdir = /Users/kentatsukuni/.rbenv/versions/2.4.1/include/ruby-2.4.0/x86_64-darwin16
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/usr/local/Cellar/ruby/2.5.0
+prefix = $(DESTDIR)/Users/kentatsukuni/.rbenv/versions/2.4.1
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -30,10 +30,10 @@ sitehdrdir = $(rubyhdrdir)/site_ruby
 rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
-vendordir = $(DESTDIR)/usr/local/lib/ruby/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20180301-64021-1ok2uw5
-sitelibdir = $(DESTDIR)./.gem.20180301-64021-1ok2uw5
-sitedir = $(DESTDIR)/usr/local/lib/ruby/site_ruby
+vendordir = $(rubylibprefix)/vendor_ruby
+sitearchdir = $(DESTDIR)./.gem.20180302-82858-1ezcdu9
+sitelibdir = $(DESTDIR)./.gem.20180302-82858-1ezcdu9
+sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
 sitearchincludedir = $(includedir)/$(sitearch)
@@ -65,10 +65,10 @@ archdir = $(rubyarchdir)
 
 CC = clang
 CXX = clang++
-LIBRUBY = $(LIBRUBY_SO)
+LIBRUBY = $(LIBRUBY_A)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework Foundation
+LIBRUBYARG_SHARED = 
+LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework CoreFoundation
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -77,26 +77,26 @@ CSRCFLAG = $(empty)
 RUBY_EXTCONF_H = 
 cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = $(optflags) $(debugflags) $(warnflags)
-optflags = -O3
+optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
 CCDLFLAGS = -fno-common
-CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe -Wall $(ARCH_FLAG)
+CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe -Wall $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS =   -I/usr/local/opt/libyaml/include -I/usr/local/opt/openssl/include -I/usr/local/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS =  -I/Users/kentatsukuni/.rbenv/versions/2.4.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -fstack-protector -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib
-dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib 
+ldflags  = -L. -L/Users/kentatsukuni/.rbenv/versions/2.4.1/lib  -fstack-protector -L/usr/local/lib
+dldflags = -L/Users/kentatsukuni/.rbenv/versions/2.4.1/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
 LDSHAREDXX = $(CXX) -dynamic -bundle
-AR = libtool -static
+AR = ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
-RUBY_SO_NAME = ruby.2.5.0
+RUBY_SO_NAME = ruby
 RUBYW_INSTALL_NAME = 
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
@@ -104,7 +104,7 @@ RUBY_BASE_NAME = ruby
 
 arch = x86_64-darwin16
 sitearch = $(arch)
-ruby_version = 2.5.0
+ruby_version = 2.4.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
 RUBY = $(ruby)
 ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $(hdrdir)/ruby/missing.h $(hdrdir)/ruby/intern.h $(hdrdir)/ruby/st.h $(hdrdir)/ruby/subst.h $(arch_hdrdir)/ruby/config.h
@@ -122,8 +122,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /usr/local/opt/libyaml/lib /usr/local/opt/openssl/lib /usr/local/opt/readline/lib
-LIBPATH =  -L. -L$(libdir) -L/usr/local/opt/libyaml/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib
+libpath = . $(libdir)
+LIBPATH =  -L. -L$(libdir)
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -134,7 +134,7 @@ extout =
 extout_prefix = 
 target_prefix = /bindex
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED)  -lpthread -ldl -lobjc 
+LIBS =   -lpthread -ldl -lobjc 
 ORIG_SRCS = cruby.c
 SRCS = $(ORIG_SRCS) 
 OBJS = cruby.o
@@ -160,7 +160,7 @@ CLEANLIBS     = $(TARGET_SO)
 CLEANOBJS     = *.o  *.bak
 
 all:    $(DLLIB)
-static: $(STATIC_LIB)
+static: $(STATIC_LIB) install-rb
 .PHONY: all install static install-so install-rb
 .PHONY: clean clean-so clean-static clean-rb
 

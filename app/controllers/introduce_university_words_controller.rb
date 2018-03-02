@@ -4,7 +4,7 @@ class IntroduceUniversityWordsController < ApplicationController
   #index->データの一覧の表示
   def index
    #mythreadのデータの全件取得
-   @introduceUniversityWords = Introduce_university_word.all
+   @introduceUniversityWords = IntroduceUniversityWord.all
   end
   #show->個別データの表示
   def show
@@ -14,13 +14,13 @@ class IntroduceUniversityWordsController < ApplicationController
   #new->新規作成ページの表示
   def new
    #モデルオブジェクトの生成
-   @introduceUniversityWords = Introduce_university_word.new
+   @introduceUniversityWords = IntroduceUniversityWord.new
   end
 
   #create->新規データの登録
   def create
    #formのデータを受け取る
-   @introduceUniversityWords =Introduce_university_word.create(introduceUniversityWords_params)
+   @introduceUniversityWords =IntroduceUniversityWord.create(introduceUniversityWords_params)
    #saveメソッドでデータをセーブ　*newメソッド + saveメソッド = createメソッド
    if @introduceUniversityWords.save
      #saveが完了したら、一覧ページへリダイレクト
@@ -59,12 +59,12 @@ class IntroduceUniversityWordsController < ApplicationController
   private
   #strong parameters リクエストパラメターの検証（これがないとうまくいかないので注意）
     def introduceUniversityWords_params
-     params.require(:introduce_university_words).permit(:title, :meaning, :example)
+     params.require(:introduce_university_word).permit(:title, :meaning, :example)
     end
 
     #共通処理なので、before_actionで呼び出している
     def set_introduceUniversityWord
     #特定データの取得
-     @introduceUniversityWords = Introduce_university_word.find(params[:id])
+     @introduceUniversityWords = IntroduceUniversityWord.find(params[:id])
     end
 end
