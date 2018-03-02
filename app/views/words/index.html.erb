@@ -1,7 +1,7 @@
 <h1>第二言語</h1>
 <% @words.each do |obj| %>
   <div>
-    <%= obj. %>
+    <%= obj.id %>
     <%= link_to '編集',edit_word_path(obj.id)%>
     <%= link_to '削除',word_path(obj.id),method: :delete%>
   </div>

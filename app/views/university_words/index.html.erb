@@ -1,0 +1,9 @@
+<h1>大学生の用語集ランキング</h1>
+<% @universityWords.each do |obj| %>
+  <div>
+    <%= obj.id %>
+    <%= link_to '編集',edit_university_word_path(obj.id)%>
+    <%= link_to '削除',university_word_path(obj.id),method: :delete%>
+  </div>
+<%end%>
+<%= link_to '新規作成',new_university_word_path%>

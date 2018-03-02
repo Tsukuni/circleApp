@@ -30,15 +30,18 @@ Kernel configured for up to 4 processors.
 Processor type: x86_64h (Intel x86-64h Haswell)
 Processors active: 0 1 2 3
 Primary memory available: 8.00 gigabytes
-Default processor set: 367 tasks, 1860 threads, 4 processors
-Load average: 2.67, Mach factor: 1.60
+Default processor set: 336 tasks, 1834 threads, 4 processors
+Load average: 4.93, Mach factor: 0.51
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /usr/local/bin
+PATH: /Users/kentatsukuni/.rbenv/versions/2.4.1/bin
+PATH: /usr/local/Cellar/rbenv/1.1.1/libexec
+PATH: /Users/kentatsukuni/.rbenv/plugins/ruby-build/bin
 PATH: /Users/kentatsukuni/.rbenv/shims
 PATH: /Users/kentatsukuni/.nodebrew/current/bin
+PATH: /usr/local/bin
 PATH: /usr/bin
 PATH: /bin
 PATH: /usr/sbin

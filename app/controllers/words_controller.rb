@@ -41,7 +41,7 @@ def update
  #編集データの取得
  if @words.update(word_params)
    #updateが完了したら一覧ページへリダイレクト
-   redirect_to word_path
+   redirect_to words_path
  else
    #updateを失敗すると編集ページへ
    render 'edit'
