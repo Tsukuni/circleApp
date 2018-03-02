@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @date_place.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @date_place.url %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @date_place.context %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @date_place.image %>
+</p>
+
+<%= link_to 'Edit', edit_date_place_path(@date_place) %> |
+<%= link_to 'Back', date_places_path %>

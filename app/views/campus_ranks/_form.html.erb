@@ -1,0 +1,32 @@
+<%= form_with(model: campus_rank, local: true) do |form| %>
+  <% if campus_rank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(campus_rank.errors.count, "error") %> prohibited this campus_rank from being saved:</h2>
+
+      <ul>
+      <% campus_rank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rank1 %>
+    <%= form.text_field :rank1, id: :campus_rank_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank2 %>
+    <%= form.text_field :rank2, id: :campus_rank_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank3 %>
+    <%= form.text_field :rank3, id: :campus_rank_rank3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

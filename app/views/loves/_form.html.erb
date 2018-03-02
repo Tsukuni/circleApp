@@ -1,0 +1,37 @@
+<%= form_with(model: lofe, local: true) do |form| %>
+  <% if lofe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lofe.errors.count, "error") %> prohibited this lofe from being saved:</h2>
+
+      <ul>
+      <% lofe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :image1 %>
+    <%= form.text_field :image1, id: :lofe_image1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image2 %>
+    <%= form.text_field :image2, id: :lofe_image2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image3 %>
+    <%= form.text_field :image3, id: :lofe_image3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image4 %>
+    <%= form.text_field :image4, id: :lofe_image4 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

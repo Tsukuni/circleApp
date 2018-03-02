@@ -10,7 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301235214) do
+ActiveRecord::Schema.define(version: 20180302032449) do
+
+  create_table "campus_lives", force: :cascade do |t|
+    t.string "image1"
+    t.string "image2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "campus_ranks", force: :cascade do |t|
+    t.string "rank1"
+    t.string "rank2"
+    t.string "rank3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "capacities", force: :cascade do |t|
+    t.string "image"
+    t.text "context"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "date_places", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.text "context"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "introduce_university_words", force: :cascade do |t|
     t.string "title"
@@ -23,6 +54,15 @@ ActiveRecord::Schema.define(version: 20180301235214) do
   create_table "languages", force: :cascade do |t|
     t.text "context"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "loves", force: :cascade do |t|
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
