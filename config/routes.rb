@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :words
   resources :university_words
   resources :introduce_university_words
+  resources :sessions
   get 'advices/index'
   root to: 'home#index'
 

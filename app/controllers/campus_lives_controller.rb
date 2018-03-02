@@ -1,4 +1,5 @@
 class CampusLivesController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_campus_life, only: [:show, :edit, :update, :destroy]
 
   # GET /campus_lives
@@ -70,5 +71,10 @@ class CampusLivesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def campus_life_params
       params.require(:campus_life).permit(:image1, :image2)
+    end
+    def login_check
+      if session[:user_id].nil?
+        redirect_to sessions_path
+      end
     end
 end

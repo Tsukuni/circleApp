@@ -1,4 +1,5 @@
 class ExamsController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_exam, only: [:show, :edit, :update, :destroy]
 
   # GET /exams
@@ -70,5 +71,10 @@ class ExamsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def exam_params
       params.require(:exam).permit(:image)
+    end
+    def login_check
+      if session[:user_id].nil?
+        redirect_to sessions_path
+      end
     end
 end

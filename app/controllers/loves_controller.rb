@@ -1,4 +1,5 @@
 class LovesController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_lofe, only: [:show, :edit, :update, :destroy]
 
   # GET /loves
@@ -70,5 +71,10 @@ class LovesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def lofe_params
       params.require(:lofe).permit(:image1, :image2, :image3, :image4)
+    end
+    def login_check
+      if session[:user_id].nil?
+        redirect_to sessions_path
+      end
     end
 end

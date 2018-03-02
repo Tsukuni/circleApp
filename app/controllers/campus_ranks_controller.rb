@@ -1,4 +1,5 @@
 class CampusRanksController < ApplicationController
+  before_action :login_check, only: %i(index new edit create update destroy)
   before_action :set_campus_rank, only: [:show, :edit, :update, :destroy]
 
   # GET /campus_ranks
@@ -70,5 +71,10 @@ class CampusRanksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def campus_rank_params
       params.require(:campus_rank).permit(:rank1, :rank2, :rank3)
+    end
+    def login_check
+      if session[:user_id].nil?
+        redirect_to sessions_path
+      end
     end
 end
