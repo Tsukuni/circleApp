@@ -30,7 +30,7 @@ class DatePlacesController < ApplicationController
 
     respond_to do |format|
       if @date_place.save
-        format.html { redirect_to @date_place, notice: 'Date place was successfully created.' }
+        format.html { redirect_to loves_path, notice: 'Date place was successfully created.' }
         format.json { render :show, status: :created, location: @date_place }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class DatePlacesController < ApplicationController
   def update
     respond_to do |format|
       if @date_place.update(date_place_params)
-        format.html { redirect_to @date_place, notice: 'Date place was successfully updated.' }
+        format.html { redirect_to loves_path, notice: 'Date place was successfully updated.' }
         format.json { render :show, status: :ok, location: @date_place }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class DatePlacesController < ApplicationController
   def destroy
     @date_place.destroy
     respond_to do |format|
-      format.html { redirect_to date_places_url, notice: 'Date place was successfully destroyed.' }
+      format.html { redirect_to loves_path, notice: 'Date place was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

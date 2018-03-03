@@ -26,7 +26,7 @@ class IntroduceUniversityWordsController < ApplicationController
    #saveメソッドでデータをセーブ　*newメソッド + saveメソッド = createメソッド
    if @introduceUniversityWords.save
      #saveが完了したら、一覧ページへリダイレクト
-     redirect_to introduce_university_words_path
+     redirect_to university_words_path
    else
      #saveを失敗すると新規作成ページへ
      render 'new'
@@ -43,7 +43,7 @@ class IntroduceUniversityWordsController < ApplicationController
    #編集データの取得
    if @introduceUniversityWords.update(introduceUniversityWords_params)
      #updateが完了したら一覧ページへリダイレクト
-     redirect_to introduce_university_words_path
+     redirect_to university_words_path
    else
      #updateを失敗すると編集ページへ
      render 'edit'
@@ -55,7 +55,7 @@ class IntroduceUniversityWordsController < ApplicationController
    #データの削除
     @introduceUniversityWords.destroy
    #一覧ページへリダイレクト
-   redirect_to introduce_university_words_path
+   redirect_to university_words_path
   end
 
   private

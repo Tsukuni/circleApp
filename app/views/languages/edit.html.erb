@@ -4,7 +4,7 @@
 <div>
   <%=form_for @languages do |f| %>
     <div class="col-md-6">
-      <%= f.text_field :context, class: "form-control"%>
+      <%= f.text_area :context, class: "form-control"%>
     </div>
     <%= f.submit "送信" ,class: "btn" %>
   <% end %>
