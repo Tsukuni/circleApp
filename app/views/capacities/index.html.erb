@@ -1,29 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Capacities</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Context</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @capacities.each do |capacity| %>
+<h3>資格・就活</h3>
+<div class="col-md-12 adBox">
+  <h4>素材画像</h4>
+  <% @capacities.each do |obj| %>
+    <table class="table">
       <tr>
-        <td><%= capacity.image %></td>
-        <td><%= capacity.context %></td>
-        <td><%= link_to 'Show', capacity %></td>
-        <td><%= link_to 'Edit', edit_capacity_path(capacity) %></td>
-        <td><%= link_to 'Destroy', capacity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image1 %><span class="button"><%= link_to '削除',capacity_path(obj.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_capacity_path(obj.id)%></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Capacity', new_capacity_path %>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image2 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image3 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image4 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image5 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image6 %></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_capacity_path%>
+</div>

@@ -1,6 +1,11 @@
-<h1>Editing Exam</h1>
-
-<%= render 'form', exam: @exam %>
-
-<%= link_to 'Show', @exam %> |
-<%= link_to 'Back', exams_path %>
+<div class="col-md-12">
+  <h3>素材画像</h3>
+</div>
+<div>
+  <%=form_for @exam do |f| %>
+    <div class="col-md-6">
+      <%= f.file_field :exam_image %>
+    </div>
+    <%= f.submit "送信" ,class: "btn" %>
+  <% end %>
+</div>

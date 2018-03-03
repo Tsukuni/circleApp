@@ -5,6 +5,7 @@
   <%=form_for @languages do |f| %>
     <div class="col-md-6">
       <%= f.text_area :context, class: "form-control"%>
+      <%= f.file_field :image %>
     </div>
     <%= f.submit "送信" ,class: "btn" %>
   <% end %>

@@ -30,7 +30,7 @@ class CampusLivesController < ApplicationController
 
     respond_to do |format|
       if @campus_life.save
-        format.html { redirect_to @campus_life, notice: 'Campus life was successfully created.' }
+        format.html { redirect_to campus_ranks_path, notice: 'Campus life was successfully created.' }
         format.json { render :show, status: :created, location: @campus_life }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class CampusLivesController < ApplicationController
   def update
     respond_to do |format|
       if @campus_life.update(campus_life_params)
-        format.html { redirect_to @campus_life, notice: 'Campus life was successfully updated.' }
+        format.html { redirect_to campus_ranks_path, notice: 'Campus life was successfully updated.' }
         format.json { render :show, status: :ok, location: @campus_life }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class CampusLivesController < ApplicationController
   def destroy
     @campus_life.destroy
     respond_to do |format|
-      format.html { redirect_to campus_lives_url, notice: 'Campus life was successfully destroyed.' }
+      format.html { redirect_to campus_ranks_path, notice: 'Campus life was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,7 +71,7 @@ class CampusLivesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def campus_life_params
-      params.require(:campus_life).permit(:image1, :image2)
+      params.require(:campus_life).permit(:campus_image1,:campus_image2)
     end
     def login_check
       if session[:user_id].nil?

@@ -1,5 +1,14 @@
-<h1>New Lofe</h1>
-
-<%= render 'form', lofe: @lofe %>
-
-<%= link_to 'Back', loves_path %>
+<div class="col-md-12">
+  <h3>新規作成</h3>
+</div>
+<div>
+  <%=form_for @lofe do |f| %>
+    <div class="col-md-6">
+      <%= f.file_field :image1 %>
+      <%= f.file_field :image2 %>
+      <%= f.file_field :image3 %>
+      <%= f.file_field :image4 %>
+    </div>
+    <%= f.submit "送信" ,class: "btn" %>
+  <% end %>
+</div>

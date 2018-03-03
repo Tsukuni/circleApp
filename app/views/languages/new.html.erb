@@ -1,4 +1,5 @@
 <%=form_for @languages do |f| %>
   <%= f.text_area :context %>
+  <%= f.file_field :image %>
   <%= f.submit "send" %>
 <% end %>
