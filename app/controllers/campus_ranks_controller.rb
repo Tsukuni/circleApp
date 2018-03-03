@@ -7,6 +7,7 @@ class CampusRanksController < ApplicationController
   # GET /campus_ranks.json
   def index
     @campus_ranks = CampusRank.all
+    @campus_lives = CampusLife.all
   end
 
   # GET /campus_ranks/1
@@ -30,7 +31,7 @@ class CampusRanksController < ApplicationController
 
     respond_to do |format|
       if @campus_rank.save
-        format.html { redirect_to @campus_rank, notice: 'Campus rank was successfully created.' }
+        format.html { redirect_to campus_ranks_path, notice: 'Campus rank was successfully created.' }
         format.json { render :show, status: :created, location: @campus_rank }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class CampusRanksController < ApplicationController
   def update
     respond_to do |format|
       if @campus_rank.update(campus_rank_params)
-        format.html { redirect_to @campus_rank, notice: 'Campus rank was successfully updated.' }
+        format.html { redirect_to campus_ranks_path, notice: 'Campus rank was successfully updated.' }
         format.json { render :show, status: :ok, location: @campus_rank }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class CampusRanksController < ApplicationController
   def destroy
     @campus_rank.destroy
     respond_to do |format|
-      format.html { redirect_to campus_ranks_url, notice: 'Campus rank was successfully destroyed.' }
+      format.html { redirect_to campus_ranks_path, notice: 'Campus rank was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

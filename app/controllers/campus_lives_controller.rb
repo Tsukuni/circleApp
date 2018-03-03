@@ -30,7 +30,7 @@ class CampusLivesController < ApplicationController
 
     respond_to do |format|
       if @campus_life.save
-        format.html { redirect_to @campus_life, notice: 'Campus life was successfully created.' }
+        format.html { redirect_to campus_ranks_path, notice: 'Campus life was successfully created.' }
         format.json { render :show, status: :created, location: @campus_life }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class CampusLivesController < ApplicationController
   def update
     respond_to do |format|
       if @campus_life.update(campus_life_params)
-        format.html { redirect_to @campus_life, notice: 'Campus life was successfully updated.' }
+        format.html { redirect_to campus_ranks_path, notice: 'Campus life was successfully updated.' }
         format.json { render :show, status: :ok, location: @campus_life }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class CampusLivesController < ApplicationController
   def destroy
     @campus_life.destroy
     respond_to do |format|
-      format.html { redirect_to campus_lives_url, notice: 'Campus life was successfully destroyed.' }
+      format.html { redirect_to campus_ranks_path, notice: 'Campus life was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -5,7 +5,9 @@
       <span class="fontsize"><%= obj.context %></span>
       <span class="button"><%= link_to '削除',language_path(obj.id),method: :delete%></span>
       <span class="button"><%= link_to '編集',edit_language_path(obj.id)%></span>
+      <div><%= image_tag obj.image %></div>
   <%end%>
+
   <div><%= link_to '新規作成',new_language_url%></div>
 </div>
 <div id="Language" class="col-md-6">
