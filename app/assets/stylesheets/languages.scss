@@ -3,15 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #secondLanguage{
   padding:10px;
-  margin-bottom:10px;
+  margin-right:10px;
   background-color: white;
   border-radius: 5px;
+}
+
+.adBox{
+  background-color:white;
+  padding:10px;
+  margin-right:10px;
+  border-radius:5px;
 }
 
 #Language{
   padding:10px;
   background-color: white;
   border-radius: 5px;
+
+}
+.breal{
+  word-break: break-all;
+}
+
+.fontsize{
+  font-size:15px;
 }
 
 .field{
@@ -36,7 +51,7 @@
 }
 
 .button{
-  font-size: 20px;
+  font-size: 15px;
   float:right;
   padding-right: 10px;
 }

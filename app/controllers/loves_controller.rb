@@ -7,6 +7,7 @@ class LovesController < ApplicationController
   # GET /loves.json
   def index
     @loves = Love.all
+    @date_places = DatePlace.all
   end
 
   # GET /loves/1
@@ -71,7 +72,7 @@ class LovesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lofe_params
-      params.require(:lofe).permit(:image1, :image2, :image3, :image4)
+      params.require(:love).permit(:image1, :image2, :image3, :image4)
     end
     def login_check
       if session[:user_id].nil?
