@@ -5,20 +5,20 @@
     <table class="table">
       <tr>
         <th scope="row">1位</th>
-        <td><%= obj.image1 %><span class="button"><%= link_to '削除',lofe_path(obj.id),method: :delete%></span>
+        <td><%= image_tag obj.image1 %><span class="button"><%= link_to '削除',lofe_path(obj.id),method: :delete%></span>
         <span class="button"><%= link_to '編集',edit_lofe_path(obj.id)%></td>
       </tr>
       <tr>
         <th scope="row">2位</th>
-        <td><%= obj.image2 %></td>
+        <td><%= image_tag obj.image2 %></td>
       </tr>
       <tr>
         <th scope="row">3位</th>
-        <td><%= obj.image3 %></td>
+        <td><%= image_tag obj.image3 %></td>
       </tr>
       <tr>
         <th scope="row">3位</th>
-        <td><%= obj.image4 %></td>
+        <td><%= image_tag obj.image4 %></td>
       </tr>
     </table>
   <%end%>
@@ -43,7 +43,7 @@
       </tr>
       <tr>
         <th scope="row">画像</th>
-        <td><%= obj.image%></td>
+        <td><%= image_tag obj.place_image%></td>
       </tr>
     </table>
   <%end%>

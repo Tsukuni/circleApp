@@ -1,6 +1,14 @@
-<h1>Editing Date Place</h1>
-
-<%= render 'form', date_place: @date_place %>
-
-<%= link_to 'Show', @date_place %> |
-<%= link_to 'Back', date_places_path %>
+<div class="col-md-12">
+  <h3>デートスポット</h3>
+</div>
+<div>
+  <%=form_for @date_place do |f| %>
+    <div class="col-md-6">
+      <%= f.text_field :name, class: "form-control"%>
+      <%= f.text_field :url, class: "form-control"%>
+      <%= f.text_area :context, class: "form-control"%>
+      <%= f.file_field :place_image %>
+    </div>
+    <%= f.submit "送信" ,class: "btn" %>
+  <% end %>
+</div>

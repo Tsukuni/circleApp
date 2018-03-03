@@ -1,5 +1,12 @@
-<h1>New Campus Life</h1>
-
-<%= render 'form', campus_life: @campus_life %>
-
-<%= link_to 'Back', campus_lives_path %>
+<div class="col-md-12">
+  <h3>素材画像</h3>
+</div>
+<div>
+  <%=form_for @campus_life do |f| %>
+    <div class="col-md-6">
+      <%= f.file_field :campus_image1 %>
+      <%= f.file_field :campus_image2 %>
+    </div>
+    <%= f.submit "送信" ,class: "btn" %>
+  <% end %>
+</div>

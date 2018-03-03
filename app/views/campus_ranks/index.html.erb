@@ -26,12 +26,12 @@
     <table class="table">
       <tr>
         <th scope="row">画像1</th>
-        <td><%= obj.image1 %><span class="button"><%= link_to '削除',campus_life_path(obj.id),method: :delete%></span>
+        <td><%= image_tag obj.campus_image1 %><span class="button"><%= link_to '削除',campus_life_path(obj.id),method: :delete%></span>
         <span class="button"><%= link_to '編集',edit_campus_life_path(obj.id)%></td>
       </tr>
       <tr>
         <th scope="row">画像2</th>
-        <td><%= obj.image2 %></td>
+        <td><%= image_tag obj.campus_image2 %></td>
       </tr>
     </table>
   <%end%>

@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180302063931) do
+ActiveRecord::Schema.define(version: 20180303092957) do
 
   create_table "campus_lives", force: :cascade do |t|
     t.string "image1"
     t.string "image2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "campus_image1"
+    t.string "campus_image2"
   end
 
   create_table "campus_ranks", force: :cascade do |t|
@@ -32,6 +34,12 @@ ActiveRecord::Schema.define(version: 20180302063931) do
     t.text "context"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "capa_image1"
+    t.string "capa_image2"
+    t.string "capa_image3"
+    t.string "capa_image4"
+    t.string "capa_image5"
+    t.string "capa_image6"
   end
 
   create_table "date_places", force: :cascade do |t|
@@ -41,6 +49,7 @@ ActiveRecord::Schema.define(version: 20180302063931) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "place_image"
   end
 
   create_table "exam_comments", force: :cascade do |t|
@@ -53,6 +62,7 @@ ActiveRecord::Schema.define(version: 20180302063931) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "exam_image"
   end
 
   create_table "introduce_university_words", force: :cascade do |t|

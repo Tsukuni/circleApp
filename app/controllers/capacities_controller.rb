@@ -30,7 +30,7 @@ class CapacitiesController < ApplicationController
 
     respond_to do |format|
       if @capacity.save
-        format.html { redirect_to @capacity, notice: 'Capacity was successfully created.' }
+        format.html { redirect_to capacities_path, notice: 'Capacity was successfully created.' }
         format.json { render :show, status: :created, location: @capacity }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class CapacitiesController < ApplicationController
   def update
     respond_to do |format|
       if @capacity.update(capacity_params)
-        format.html { redirect_to @capacity, notice: 'Capacity was successfully updated.' }
+        format.html { redirect_to capacities_path, notice: 'Capacity was successfully updated.' }
         format.json { render :show, status: :ok, location: @capacity }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class CapacitiesController < ApplicationController
   def destroy
     @capacity.destroy
     respond_to do |format|
-      format.html { redirect_to capacities_url, notice: 'Capacity was successfully destroyed.' }
+      format.html { redirect_to capacities_path, notice: 'Capacity was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,7 +71,7 @@ class CapacitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def capacity_params
-      params.require(:capacity).permit(:image, :context)
+      params.require(:capacity).permit(:image, :context,:capa_image1,:capa_image2,:capa_image3,:capa_image4,:capa_image5,:capa_image6,)
     end
     def login_check
       if session[:user_id].nil?

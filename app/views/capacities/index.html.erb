@@ -1,12 +1,32 @@
 <h3>資格・就活</h3>
-<div class="col-md-5 adBox">
+<div class="col-md-12 adBox">
   <h4>素材画像</h4>
   <% @capacities.each do |obj| %>
     <table class="table">
       <tr>
         <th scope="row">画像</th>
-        <td><%= obj.image %><span class="button"><%= link_to '削除',capacity_path(obj.id),method: :delete%></span>
+        <td><%= image_tag obj.capa_image1 %><span class="button"><%= link_to '削除',capacity_path(obj.id),method: :delete%></span>
         <span class="button"><%= link_to '編集',edit_capacity_path(obj.id)%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image2 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image3 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image4 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image5 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.capa_image6 %></td>
       </tr>
     </table>
   <%end%>

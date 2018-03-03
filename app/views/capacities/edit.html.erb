@@ -1,6 +1,16 @@
-<h1>Editing Capacity</h1>
-
-<%= render 'form', capacity: @capacity %>
-
-<%= link_to 'Show', @capacity %> |
-<%= link_to 'Back', capacities_path %>
+<div class="col-md-12">
+  <h3>就職・資格</h3>
+</div>
+<div>
+  <%=form_for @capacity do |f| %>
+    <div class="col-md-6">
+      <%= f.file_field :capa_image1 %>
+      <%= f.file_field :capa_image2 %>
+      <%= f.file_field :capa_image3 %>
+      <%= f.file_field :capa_image4 %>
+      <%= f.file_field :capa_image5 %>
+      <%= f.file_field :capa_image6 %>
+    </div>
+    <%= f.submit "送信" ,class: "btn" %>
+  <% end %>
+</div>

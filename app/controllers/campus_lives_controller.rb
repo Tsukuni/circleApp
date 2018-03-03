@@ -71,7 +71,7 @@ class CampusLivesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def campus_life_params
-      params.require(:campus_life).permit(:image1, :image2)
+      params.require(:campus_life).permit(:campus_image1,:campus_image2)
     end
     def login_check
       if session[:user_id].nil?

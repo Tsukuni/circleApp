@@ -71,7 +71,7 @@ class DatePlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def date_place_params
-      params.require(:date_place).permit(:name, :url, :context, :image)
+      params.require(:date_place).permit(:name, :url, :context, :place_image)
     end
     def login_check
       if session[:user_id].nil?

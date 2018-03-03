@@ -5,7 +5,7 @@
     <table class="table">
       <tr>
         <th scope="row">画像</th>
-        <td><%= obj.image %><span class="button"><%= link_to '削除',exam_path(obj.id),method: :delete%></span>
+        <td><%= image_tag obj.exam_image %><span class="button"><%= link_to '削除',exam_path(obj.id),method: :delete%></span>
         <span class="button"><%= link_to '編集',edit_exam_path(obj.id)%></td>
       </tr>
     </table>
