@@ -7,6 +7,7 @@ class ExamsController < ApplicationController
   # GET /exams.json
   def index
     @exams = Exam.all
+    @exam_comments = ExamComment.all
   end
 
   # GET /exams/1

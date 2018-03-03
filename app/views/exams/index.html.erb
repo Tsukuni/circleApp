@@ -1,27 +1,27 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Exams</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @exams.each do |exam| %>
+<h3>テスト</h3>
+<div class="col-md-5 adBox">
+  <h4>素材画像</h4>
+  <% @exams.each do |obj| %>
+    <table class="table">
       <tr>
-        <td><%= exam.image %></td>
-        <td><%= link_to 'Show', exam %></td>
-        <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
-        <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th scope="row">画像</th>
+        <td><%= obj.image %><span class="button"><%= link_to '削除',exam_path(obj.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_exam_path(obj.id)%></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Exam', new_exam_path %>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_exam_path%>
+</div>
+<div class="col-md-6 adBox">
+  <h4>高校と大学のテスト勉強の違い</h4>
+  <% @exam_comments.each do |obj| %>
+    <table class="table">
+      <tr>
+        <th class="col-md-3" scope="row"><%=obj.id%></th>
+        <td class="col-md-9"><%= obj.context %><span class="button"><%= link_to '削除',exam_comment_path(obj.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_exam_comment_path(obj.id)%></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_exam_comment_path%>
+</div>

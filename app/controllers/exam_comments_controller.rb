@@ -30,7 +30,7 @@ class ExamCommentsController < ApplicationController
 
     respond_to do |format|
       if @exam_comment.save
-        format.html { redirect_to @exam_comment, notice: 'Exam comment was successfully created.' }
+        format.html { redirect_to exams_path, notice: 'Exam comment was successfully created.' }
         format.json { render :show, status: :created, location: @exam_comment }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ExamCommentsController < ApplicationController
   def update
     respond_to do |format|
       if @exam_comment.update(exam_comment_params)
-        format.html { redirect_to @exam_comment, notice: 'Exam comment was successfully updated.' }
+        format.html { redirect_to exams_path, notice: 'Exam comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @exam_comment }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class ExamCommentsController < ApplicationController
   def destroy
     @exam_comment.destroy
     respond_to do |format|
-      format.html { redirect_to exam_comments_url, notice: 'Exam comment was successfully destroyed.' }
+      format.html { redirect_to exams_path, notice: 'Exam comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
