@@ -3,9 +3,14 @@
 </div>
 <div>
   <%=form_for @exam do |f| %>
-    <div class="col-md-6">
-      <%= f.file_field :exam_image %>
+    <div class="col-md-6 adBox">
+      <table class="table">
+        <tr>
+          <th scope="row">画像</th>
+          <td><%= f.file_field :exam_image %></td>
+        </tr>
+      </table>
+      <%= f.submit "送信" ,class: "btn" %>
     </div>
-    <%= f.submit "送信" ,class: "btn" %>
   <% end %>
 </div>

@@ -3,12 +3,26 @@
 </div>
 <div>
   <%=form_for @date_place do |f| %>
-    <div class="col-md-6">
-      <%= f.text_field :name, class: "form-control"%>
-      <%= f.text_field :url, class: "form-control"%>
-      <%= f.text_area :context, class: "form-control"%>
-      <%= f.file_field :place_image %>
+    <div class="col-md-6 adBox">
+      <table class="table">
+        <tr>
+          <th scope="row">場所</th>
+          <td><%= f.text_field :name, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">URL</th>
+          <td><%= f.text_field :url, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">説明文</th>
+          <td><%= f.text_area :context, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">画像</th>
+          <td><%= f.file_field :place_image %></td>
+        </tr>
+      </table>
+      <%= f.submit "送信" ,class: "btn" %>
     </div>
-    <%= f.submit "送信" ,class: "btn" %>
   <% end %>
 </div>

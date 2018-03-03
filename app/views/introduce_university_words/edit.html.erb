@@ -1,9 +1,22 @@
-<div class="univerEditBox col-md-10">
-  <h3>よく使われる用語</h3>
-  <%=form_for @introduceUniversityWords do |f| %>
-    <div class="form-group row"><div class="col-md-1 col-form-label">用語:</div><div class="col-md-7"><%= f.text_field :title ,class:"form-control"%></div></div>
-    <div class="form-group row"><div class="col-md-1 col-form-label">意味:</div><div class="col-md-7"><%= f.text_field :meaning ,class:"form-control"%></div></div>
-    <div class="form-group row"><div class="col-md-1 col-form-label">例文:</div><div class="col-md-7"><%= f.text_area :example ,class:"form-control"%></div></div>
-    <div class="col-md-7"><%= f.submit "送信" ,class:"btn"%></div>
-  <% end %>
+<div class="col-md-10">
+  <h3>用語説明</h3>
 </div>
+  <%=form_for @introduceUniversityWords do |f| %>
+    <div class="col-md-6 adBox">
+      <table class="table">
+        <tr>
+          <th scope="row">用語</th>
+          <td><%= f.text_field :title ,class:"form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">意味</th>
+          <td><%= f.text_field :meaning ,class:"form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">例文</th>
+          <td><%= f.text_area :example ,class:"form-control"%></td>
+        </tr>
+      </table>
+      <%= f.submit "送信" ,class: "btn" %>
+    </div>
+  <% end %>

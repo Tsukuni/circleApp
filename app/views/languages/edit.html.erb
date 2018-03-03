@@ -3,10 +3,18 @@
 </div>
 <div>
   <%=form_for @languages do |f| %>
-    <div class="col-md-6">
-      <%= f.text_area :context, class: "form-control"%>
-      <%= f.file_field :image %>
+    <div class="col-md-6 adBox">
+      <table class="table">
+        <tr>
+          <th scope="row">説明文</th>
+          <td><%= f.text_area :context, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">画像</th>
+          <td><%= f.file_field :image %></td>
+        </tr>
+      </table>
+      <%= f.submit "送信" ,class: "btn" %>
     </div>
-    <%= f.submit "送信" ,class: "btn" %>
   <% end %>
 </div>

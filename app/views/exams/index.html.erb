@@ -1,18 +1,5 @@
 <h3>テスト</h3>
 <div class="col-md-5 adBox">
-  <h4>素材画像</h4>
-  <% @exams.each do |obj| %>
-    <table class="table">
-      <tr>
-        <th scope="row">画像</th>
-        <td><%= image_tag obj.exam_image %><span class="button"><%= link_to '削除',exam_path(obj.id),method: :delete%></span>
-        <span class="button"><%= link_to '編集',edit_exam_path(obj.id)%></td>
-      </tr>
-    </table>
-  <%end%>
-  <%= link_to '新規作成',new_exam_path%>
-</div>
-<div class="col-md-6 adBox">
   <h4>高校と大学のテスト勉強の違い</h4>
   <% @exam_comments.each do |obj| %>
     <table class="table">
@@ -24,4 +11,17 @@
     </table>
   <%end%>
   <%= link_to '新規作成',new_exam_comment_path%>
+</div>
+<div class="col-md-6 adBox">
+  <h4>素材画像</h4>
+  <% @exams.each do |obj| %>
+    <table class="table">
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag obj.exam_image,class: "resize" %><span class="button"><%= link_to '削除',exam_path(obj.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_exam_path(obj.id)%></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_exam_path%>
 </div>

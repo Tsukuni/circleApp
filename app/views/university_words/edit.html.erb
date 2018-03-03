@@ -1,9 +1,22 @@
-<div class="univerEditBox col-md-10">
+<div class="col-md-10">
   <h3>よく使われる用語</h3>
-  <%=form_for @universityWords do |f| %>
-    <div class="form-group row"><div class="col-md-1 col-form-label">1位:</div><div class="col-md-7"><%= f.text_field :rank1 ,class:"form-control"%></div></div>
-    <div class="form-group row"><div class="col-md-1 col-form-label">2位:</div><div class="col-md-7"><%= f.text_field :rank2 ,class:"form-control"%></div></div>
-    <div class="form-group row"><div class="col-md-1 col-form-label">3位:</div><div class="col-md-7"><%= f.text_field :rank3 ,class:"form-control"%></div></div>
-    <div class="col-md-7"><%= f.submit "送信" ,class:"btn"%></div>
-  <% end %>
 </div>
+  <%=form_for @universityWords do |f| %>
+  <div class="col-md-6 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">1位</th>
+        <td><%= f.text_field :rank1 ,class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">2位</th>
+        <td><%= f.text_field :rank2 ,class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">3位</th>
+        <td><%= f.text_field :rank3 ,class:"form-control"%></td>
+      </tr>
+    </table>
+    <%= f.submit "送信" ,class: "btn" %>
+  </div>
+  <% end %>
