@@ -1,0 +1,2 @@
+module MenSnapsHelper
+end
