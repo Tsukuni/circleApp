@@ -1,5 +1,16 @@
-<h1>New Exam Comment</h1>
-
-<%= render 'form', exam_comment: @exam_comment %>
-
-<%= link_to 'Back', exam_comments_path %>
+<div class="col-md-12">
+  <h3>高校と大学のテストの違い</h3>
+</div>
+<div>
+  <%=form_for @exam_comment do |f| %>
+    <div class="col-md-6 adBox">
+      <table class="table">
+        <tr>
+          <th scope="row">違い</th>
+          <td><%= f.text_field :context ,class:"form-control"%></td>
+        </tr>
+      </table>
+      <%= f.submit "送信" ,class: "btn" %>
+    </div>
+  <% end %>
+</div>

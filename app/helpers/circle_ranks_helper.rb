@@ -1,0 +1,2 @@
+module CircleRanksHelper
+end

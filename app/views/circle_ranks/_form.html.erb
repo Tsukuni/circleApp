@@ -1,0 +1,77 @@
+<%= form_with(model: circle_rank, local: true) do |form| %>
+  <% if circle_rank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(circle_rank.errors.count, "error") %> prohibited this circle_rank from being saved:</h2>
+
+      <ul>
+      <% circle_rank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :qestion1 %>
+    <%= form.text_field :qestion1, id: :circle_rank_qestion1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qestion2 %>
+    <%= form.text_field :qestion2, id: :circle_rank_qestion2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qestion3 %>
+    <%= form.text_field :qestion3, id: :circle_rank_qestion3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt1_rank1 %>
+    <%= form.text_field :qt1_rank1, id: :circle_rank_qt1_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt1_rank2 %>
+    <%= form.text_field :qt1_rank2, id: :circle_rank_qt1_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt1_rank3 %>
+    <%= form.text_field :qt1_rank3, id: :circle_rank_qt1_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank1 %>
+    <%= form.text_field :qt2_rank1, id: :circle_rank_qt2_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank2 %>
+    <%= form.text_field :qt2_rank2, id: :circle_rank_qt2_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank3 %>
+    <%= form.text_field :qt2_rank3, id: :circle_rank_qt2_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt3_rank1 %>
+    <%= form.text_field :qt3_rank1, id: :circle_rank_qt3_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt3_rank2 %>
+    <%= form.text_field :qt3_rank2, id: :circle_rank_qt3_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt3_rank3 %>
+    <%= form.text_field :qt3_rank3, id: :circle_rank_qt3_rank3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

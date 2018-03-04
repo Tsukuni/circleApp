@@ -3,12 +3,26 @@
 </div>
 <div>
   <%=form_for @lofe do |f| %>
-    <div class="col-md-6">
-      <%= f.file_field :image1 %>
-      <%= f.file_field :image2 %>
-      <%= f.file_field :image3 %>
-      <%= f.file_field :image4 %>
-    </div>
+  <div class="col-md-6 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= f.file_field :image1 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= f.file_field :image2 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= f.file_field :image3 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= f.file_field :image4 %></td>
+      </tr>
+    </table>
     <%= f.submit "送信" ,class: "btn" %>
+  </div>
   <% end %>
 </div>

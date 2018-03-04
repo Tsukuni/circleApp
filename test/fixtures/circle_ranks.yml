@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qestion1: MyString
+  qestion2: MyString
+  qestion3: MyString
+  qt1_rank1: MyString
+  qt1_rank2: MyString
+  qt1_rank3: MyString
+  qt2_rank1: MyString
+  qt2_rank2: MyString
+  qt2_rank3: MyString
+  qt3_rank1: MyString
+  qt3_rank2: MyString
+  qt3_rank3: MyString
+
+two:
+  qestion1: MyString
+  qestion2: MyString
+  qestion3: MyString
+  qt1_rank1: MyString
+  qt1_rank2: MyString
+  qt1_rank3: MyString
+  qt2_rank1: MyString
+  qt2_rank2: MyString
+  qt2_rank3: MyString
+  qt3_rank1: MyString
+  qt3_rank2: MyString
+  qt3_rank3: MyString

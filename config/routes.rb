@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :fashion_ranks
+  resources :trip_ranks
+  resources :school_ranks
+  resources :job_ranks
+  resources :circle_ranks
   resources :exam_comments
   resources :exams
   resources :campus_ranks

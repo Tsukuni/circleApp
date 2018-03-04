@@ -1,11 +1,36 @@
-<h3>第二言語新規作成</h3>
+<h3>第二言語</h3>
 <%=form_for @words do |f| %>
-  <div class="col-md-12 wordBottom">言語名:<%= f.text_field :name ,class:"form-control"%></div>
-  <div class="col-md-2 wordBottom">すごく簡単:<%= f.number_field :veryEasy, class:"form-control"%></div>
-  <div class="col-md-2 wordBottom">簡単:<%= f.number_field :easy, class:"form-control" %></div>
-  <div class="col-md-2 wordBottom">普通:<%= f.number_field :normal, class:"form-control" %></div>
-  <div class="col-md-2 wordBottom">難しい:<%= f.number_field :hard, class:"form-control" %></div>
-  <div class="col-md-2 wordBottom">すごく難しい:<%= f.number_field :veryHard, class:"form-control" %></div>
-  <div class="col-md-12 wordBottom">おすすめポイント:<%= f.text_area :context, class:"form-control" %></div>
-  <div class="col-md-12 wordBottom"><%= f.submit "送信",class: "btn"%></div>
+  <div class="col-md-6 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">言語名</th>
+        <td><%= f.text_field :name ,class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">すごく簡単</th>
+        <td><%= f.number_field :veryEasy, class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">簡単</th>
+        <td><%= f.number_field :easy, class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">普通</th>
+        <td><%= f.number_field :normal, class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">難しい</th>
+        <td><%= f.number_field :hard, class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">すごく難しい</th>
+        <td><%= f.number_field :veryHard, class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">オススメポイント</th>
+        <td><%= f.text_area :context, class:"form-control" %></td>
+      </tr>
+    </table>
+    <%= f.submit "送信" ,class: "btn" %>
+  </div>
 <% end %>

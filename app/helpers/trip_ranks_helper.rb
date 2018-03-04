@@ -1,0 +1,2 @@
+module TripRanksHelper
+end

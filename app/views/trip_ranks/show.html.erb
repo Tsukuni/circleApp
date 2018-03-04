@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Qestion1:</strong>
+  <%= @trip_rank.qestion1 %>
+</p>
+
+<p>
+  <strong>Qt1 rank1:</strong>
+  <%= @trip_rank.qt1_rank1 %>
+</p>
+
+<p>
+  <strong>Qt1 rank2:</strong>
+  <%= @trip_rank.qt1_rank2 %>
+</p>
+
+<p>
+  <strong>Qt1 rank3:</strong>
+  <%= @trip_rank.qt1_rank3 %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @trip_rank.content %>
+</p>
+
+<%= link_to 'Edit', edit_trip_rank_path(@trip_rank) %> |
+<%= link_to 'Back', trip_ranks_path %>

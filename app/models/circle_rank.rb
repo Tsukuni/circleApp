@@ -1,0 +1,2 @@
+class CircleRank < ApplicationRecord
+end

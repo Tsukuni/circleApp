@@ -1,0 +1,62 @@
+<%= form_with(model: job_rank, local: true) do |form| %>
+  <% if job_rank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job_rank.errors.count, "error") %> prohibited this job_rank from being saved:</h2>
+
+      <ul>
+      <% job_rank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :qestion1 %>
+    <%= form.text_field :qestion1, id: :job_rank_qestion1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qestion2 %>
+    <%= form.text_field :qestion2, id: :job_rank_qestion2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt1_rank1 %>
+    <%= form.text_field :qt1_rank1, id: :job_rank_qt1_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt1_rank2 %>
+    <%= form.text_field :qt1_rank2, id: :job_rank_qt1_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt1_rank3 %>
+    <%= form.text_field :qt1_rank3, id: :job_rank_qt1_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank1 %>
+    <%= form.text_field :qt2_rank1, id: :job_rank_qt2_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank2 %>
+    <%= form.text_field :qt2_rank2, id: :job_rank_qt2_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank3 %>
+    <%= form.text_field :qt2_rank3, id: :job_rank_qt2_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :job_rank_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
