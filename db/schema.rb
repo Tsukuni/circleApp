@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303092957) do
+ActiveRecord::Schema.define(version: 20180304060601) do
 
   create_table "campus_lives", force: :cascade do |t|
     t.string "image1"
@@ -42,6 +42,24 @@ ActiveRecord::Schema.define(version: 20180303092957) do
     t.string "capa_image6"
   end
 
+  create_table "circle_ranks", force: :cascade do |t|
+    t.string "qestion1"
+    t.string "qestion2"
+    t.string "qestion3"
+    t.string "qt1_rank1"
+    t.string "qt1_rank2"
+    t.string "qt1_rank3"
+    t.string "qt2_rank1"
+    t.string "qt2_rank2"
+    t.string "qt2_rank3"
+    t.string "qt3_rank1"
+    t.string "qt3_rank2"
+    t.string "qt3_rank3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "content"
+  end
+
   create_table "date_places", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -65,10 +83,41 @@ ActiveRecord::Schema.define(version: 20180303092957) do
     t.string "exam_image"
   end
 
+  create_table "fashion_ranks", force: :cascade do |t|
+    t.string "qestion1"
+    t.string "qestion2"
+    t.string "men_rank1"
+    t.string "men_rank2"
+    t.string "men_rank3"
+    t.string "women_rank1"
+    t.string "women_rank2"
+    t.string "women_rank3"
+    t.string "qt2_rank1"
+    t.string "qt2_rank2"
+    t.string "qt2_rank3"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "introduce_university_words", force: :cascade do |t|
     t.string "title"
     t.text "meaning"
     t.text "example"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "job_ranks", force: :cascade do |t|
+    t.string "qestion1"
+    t.string "qestion2"
+    t.string "qt1_rank1"
+    t.string "qt1_rank2"
+    t.string "qt1_rank3"
+    t.string "qt2_rank1"
+    t.string "qt2_rank2"
+    t.string "qt2_rank3"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -85,6 +134,30 @@ ActiveRecord::Schema.define(version: 20180303092957) do
     t.string "image2"
     t.string "image3"
     t.string "image4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "school_ranks", force: :cascade do |t|
+    t.string "qestion1"
+    t.string "qestion2"
+    t.string "qt1_rank1"
+    t.string "qt1_rank2"
+    t.string "qt1_rank3"
+    t.string "qt2_rank1"
+    t.string "qt2_rank2"
+    t.string "qt2_rank3"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trip_ranks", force: :cascade do |t|
+    t.string "qestion1"
+    t.string "qt1_rank1"
+    t.string "qt1_rank2"
+    t.string "qt1_rank3"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

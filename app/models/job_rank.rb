@@ -1,0 +1,2 @@
+class JobRank < ApplicationRecord
+end

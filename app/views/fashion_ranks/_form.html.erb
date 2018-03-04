@@ -1,0 +1,77 @@
+<%= form_with(model: fashion_rank, local: true) do |form| %>
+  <% if fashion_rank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fashion_rank.errors.count, "error") %> prohibited this fashion_rank from being saved:</h2>
+
+      <ul>
+      <% fashion_rank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :qestion1 %>
+    <%= form.text_field :qestion1, id: :fashion_rank_qestion1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qestion2 %>
+    <%= form.text_field :qestion2, id: :fashion_rank_qestion2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :men_rank1 %>
+    <%= form.text_field :men_rank1, id: :fashion_rank_men_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :men_rank2 %>
+    <%= form.text_field :men_rank2, id: :fashion_rank_men_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :men_rank3 %>
+    <%= form.text_field :men_rank3, id: :fashion_rank_men_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :women_rank1 %>
+    <%= form.text_field :women_rank1, id: :fashion_rank_women_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :women_rank2 %>
+    <%= form.text_field :women_rank2, id: :fashion_rank_women_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :women_rank3 %>
+    <%= form.text_field :women_rank3, id: :fashion_rank_women_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank1 %>
+    <%= form.text_field :qt2_rank1, id: :fashion_rank_qt2_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank2 %>
+    <%= form.text_field :qt2_rank2, id: :fashion_rank_qt2_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qt2_rank3 %>
+    <%= form.text_field :qt2_rank3, id: :fashion_rank_qt2_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :fashion_rank_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

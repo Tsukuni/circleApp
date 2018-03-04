@@ -1,0 +1,2 @@
+class SchoolRank < ApplicationRecord
+end

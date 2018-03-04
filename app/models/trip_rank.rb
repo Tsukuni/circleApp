@@ -1,0 +1,2 @@
+class TripRank < ApplicationRecord
+end

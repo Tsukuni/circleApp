@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Job Ranks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Qestion1</th>
+      <th>Qestion2</th>
+      <th>Qt1 rank1</th>
+      <th>Qt1 rank2</th>
+      <th>Qt1 rank3</th>
+      <th>Qt2 rank1</th>
+      <th>Qt2 rank2</th>
+      <th>Qt2 rank3</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @job_ranks.each do |job_rank| %>
+      <tr>
+        <td><%= job_rank.qestion1 %></td>
+        <td><%= job_rank.qestion2 %></td>
+        <td><%= job_rank.qt1_rank1 %></td>
+        <td><%= job_rank.qt1_rank2 %></td>
+        <td><%= job_rank.qt1_rank3 %></td>
+        <td><%= job_rank.qt2_rank1 %></td>
+        <td><%= job_rank.qt2_rank2 %></td>
+        <td><%= job_rank.qt2_rank3 %></td>
+        <td><%= job_rank.content %></td>
+        <td><%= link_to 'Show', job_rank %></td>
+        <td><%= link_to 'Edit', edit_job_rank_path(job_rank) %></td>
+        <td><%= link_to 'Destroy', job_rank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job Rank', new_job_rank_path %>
