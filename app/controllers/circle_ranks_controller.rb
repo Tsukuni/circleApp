@@ -30,7 +30,7 @@ class CircleRanksController < ApplicationController
 
     respond_to do |format|
       if @circle_rank.save
-        format.html { redirect_to @circle_rank, notice: 'Circle rank was successfully created.' }
+        format.html { redirect_to circle_ranks_path, notice: 'Circle rank was successfully created.' }
         format.json { render :show, status: :created, location: @circle_rank }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class CircleRanksController < ApplicationController
   def update
     respond_to do |format|
       if @circle_rank.update(circle_rank_params)
-        format.html { redirect_to @circle_rank, notice: 'Circle rank was successfully updated.' }
+        format.html { redirect_to circle_ranks_path, notice: 'Circle rank was successfully updated.' }
         format.json { render :show, status: :ok, location: @circle_rank }
       else
         format.html { render :edit }

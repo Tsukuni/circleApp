@@ -1,35 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Trip Ranks</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Qestion1</th>
-      <th>Qt1 rank1</th>
-      <th>Qt1 rank2</th>
-      <th>Qt1 rank3</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h3>ランキング</h3>
+  <div class="col-md-5 adBox">
+    <h4>旅行</h4>
     <% @trip_ranks.each do |trip_rank| %>
-      <tr>
-        <td><%= trip_rank.qestion1 %></td>
-        <td><%= trip_rank.qt1_rank1 %></td>
-        <td><%= trip_rank.qt1_rank2 %></td>
-        <td><%= trip_rank.qt1_rank3 %></td>
-        <td><%= trip_rank.content %></td>
-        <td><%= link_to 'Show', trip_rank %></td>
-        <td><%= link_to 'Edit', edit_trip_rank_path(trip_rank) %></td>
-        <td><%= link_to 'Destroy', trip_rank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <table class="table">
+        <tr>
+          <th scope="row">質問1</th>
+          <td><%= trip_rank.qestion1 %><span class="button"><%= link_to '削除',trip_rank,method: :delete%></span>
+          <span class="button"><%= link_to '編集',edit_trip_rank_path(trip_rank)%></td>
+        </tr>
+        <tr>
+          <th scope="row">1位</th>
+          <td><%= trip_rank.qt1_rank1 %></td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td><%= trip_rank.qt1_rank2 %></td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td><%= trip_rank.qt1_rank3 %></td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <th scope="row">一言</th>
+          <td><%= trip_rank.content %></td>
+        </tr>
+      </table>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Trip Rank', new_trip_rank_path %>
+    <%= link_to 'New Job Rank', new_trip_rank_path %>
+  </div>

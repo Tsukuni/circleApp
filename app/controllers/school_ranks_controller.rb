@@ -30,7 +30,7 @@ class SchoolRanksController < ApplicationController
 
     respond_to do |format|
       if @school_rank.save
-        format.html { redirect_to @school_rank, notice: 'School rank was successfully created.' }
+        format.html { redirect_to school_ranks_path, notice: 'School rank was successfully created.' }
         format.json { render :show, status: :created, location: @school_rank }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class SchoolRanksController < ApplicationController
   def update
     respond_to do |format|
       if @school_rank.update(school_rank_params)
-        format.html { redirect_to @school_rank, notice: 'School rank was successfully updated.' }
+        format.html { redirect_to school_ranks_path, notice: 'School rank was successfully updated.' }
         format.json { render :show, status: :ok, location: @school_rank }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class SchoolRanksController < ApplicationController
   def destroy
     @school_rank.destroy
     respond_to do |format|
-      format.html { redirect_to school_ranks_url, notice: 'School rank was successfully destroyed.' }
+      format.html { redirect_to school_ranks_path, notice: 'School rank was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

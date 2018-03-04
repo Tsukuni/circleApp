@@ -1,6 +1,72 @@
-<h1>Editing Fashion Rank</h1>
-
-<%= render 'form', fashion_rank: @fashion_rank %>
-
-<%= link_to 'Show', @fashion_rank %> |
-<%= link_to 'Back', fashion_ranks_path %>
+<div class="col-md-12">
+  <h3>ファッション</h3>
+</div>
+<div>
+  <%=form_for @fashion_rank do |f| %>
+    <div class="col-md-6 adBox">
+      <table class="table">
+        <tr>
+          <th scope="row">質問1</th>
+          <td><%= f.text_field :qestion1, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th>男性</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">1位</th>
+          <td><%= f.text_field :men_rank1, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td><%= f.text_field :men_rank2, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td><%= f.text_field :men_rank3, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th>女性</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">1位</th>
+          <td><%= f.text_field :women_rank1, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td><%= f.text_field :women_rank2, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td><%= f.text_field :women_rank3, class: "form-control"%></td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <th scope="row">質問2</th>
+          <td><%= f.text_field :qestion2, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">1位</th>
+          <td><%= f.text_field :qt2_rank1, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td><%= f.text_field :qt2_rank2, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td><%= f.text_field :qt2_rank3, class: "form-control"%></td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <th scope="row">一言</th>
+          <td><%= f.text_area :content, class: "form-control"%></td>
+        </tr>
+      </table>
+      <%= f.submit "送信" ,class: "btn button" %>
+    </div>
+  <% end %>
+</div>

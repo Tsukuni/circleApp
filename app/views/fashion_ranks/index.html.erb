@@ -1,49 +1,70 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Fashion Ranks</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Qestion1</th>
-      <th>Qestion2</th>
-      <th>Men rank1</th>
-      <th>Men rank2</th>
-      <th>Men rank3</th>
-      <th>Women rank1</th>
-      <th>Women rank2</th>
-      <th>Women rank3</th>
-      <th>Qt2 rank1</th>
-      <th>Qt2 rank2</th>
-      <th>Qt2 rank3</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h3>ランキング</h3>
+  <div class="col-md-5 adBox">
+    <h4>ファッション</h4>
     <% @fashion_ranks.each do |fashion_rank| %>
-      <tr>
-        <td><%= fashion_rank.qestion1 %></td>
-        <td><%= fashion_rank.qestion2 %></td>
-        <td><%= fashion_rank.men_rank1 %></td>
-        <td><%= fashion_rank.men_rank2 %></td>
-        <td><%= fashion_rank.men_rank3 %></td>
-        <td><%= fashion_rank.women_rank1 %></td>
-        <td><%= fashion_rank.women_rank2 %></td>
-        <td><%= fashion_rank.women_rank3 %></td>
-        <td><%= fashion_rank.qt2_rank1 %></td>
-        <td><%= fashion_rank.qt2_rank2 %></td>
-        <td><%= fashion_rank.qt2_rank3 %></td>
-        <td><%= fashion_rank.content %></td>
-        <td><%= link_to 'Show', fashion_rank %></td>
-        <td><%= link_to 'Edit', edit_fashion_rank_path(fashion_rank) %></td>
-        <td><%= link_to 'Destroy', fashion_rank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <table class="table">
+        <tr>
+          <th scope="row">質問1</th>
+          <td><%= fashion_rank.qestion1 %><span class="button"><%= link_to '削除',fashion_rank,method: :delete%></span>
+          <span class="button"><%= link_to '編集',edit_fashion_rank_path(fashion_rank)%></td>
+        </tr>
+        <tr>
+          <th scope="row">男性</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">1位</th>
+          <td><%= fashion_rank.men_rank1 %></td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td><%= fashion_rank.men_rank2 %></td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td><%= fashion_rank.men_rank3 %></td>
+        </tr>
+        <tr>
+          <th scope="row">女性</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">1位</th>
+          <td><%= fashion_rank.women_rank1 %></td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td><%= fashion_rank.women_rank2 %></td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td><%= fashion_rank.women_rank3 %></td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <th scope="row">質問2</th>
+          <td><%= fashion_rank.qestion2 %></td>
+        </tr>
+        <tr>
+          <th scope="row">1位</th>
+          <td><%= fashion_rank.qt2_rank1 %></td>
+        </tr>
+        <tr>
+          <th scope="row">2位</th>
+          <td><%= fashion_rank.qt2_rank2 %></td>
+        </tr>
+        <tr>
+          <th scope="row">3位</th>
+          <td><%= fashion_rank.qt2_rank3 %></td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <th scope="row">一言</th>
+          <td><%= fashion_rank.content %></td>
+        </tr>
+      </table>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Fashion Rank', new_fashion_rank_path %>
+    <%= link_to 'New Job Rank', new_fashion_rank_path %>
+  </div>
