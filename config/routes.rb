@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :women_snaps
+  resources :men_snaps
   resources :fashion_ranks
   resources :trip_ranks
   resources :school_ranks

@@ -1,0 +1,27 @@
+<%= form_with(model: men_snap, local: true) do |form| %>
+  <% if men_snap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(men_snap.errors.count, "error") %> prohibited this men_snap from being saved:</h2>
+
+      <ul>
+      <% men_snap.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :men_image %>
+    <%= form.text_field :men_image, id: :men_snap_men_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :men_snap_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<h3>スナップ</h3>
+<div class="col-md-6 adBox">
+  <h4>Men</h4>
+  <% @men_snaps.each do |men_snap| %>
+    <table class="table">
+      <tr>
+        <th scope="row">画像</th>
+        <td><%= image_tag men_snap.men_image,class:"resize"%><span class="button"><%= link_to '削除',men_snap,method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_men_snap_path(men_snap)%></td>
+      </tr>
+      <tr>
+        <th scope="row">名前</th>
+        <td><%= men_snap.name %></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_men_snap_path%>
+</div>
