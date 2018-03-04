@@ -30,7 +30,7 @@ class FashionRanksController < ApplicationController
 
     respond_to do |format|
       if @fashion_rank.save
-        format.html { redirect_to @fashion_rank, notice: 'Fashion rank was successfully created.' }
+        format.html { redirect_to fashion_ranks_path, notice: 'Fashion rank was successfully created.' }
         format.json { render :show, status: :created, location: @fashion_rank }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class FashionRanksController < ApplicationController
   def update
     respond_to do |format|
       if @fashion_rank.update(fashion_rank_params)
-        format.html { redirect_to @fashion_rank, notice: 'Fashion rank was successfully updated.' }
+        format.html { redirect_to fashion_ranks_path, notice: 'Fashion rank was successfully updated.' }
         format.json { render :show, status: :ok, location: @fashion_rank }
       else
         format.html { render :edit }

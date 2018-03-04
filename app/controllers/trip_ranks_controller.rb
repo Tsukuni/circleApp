@@ -30,7 +30,7 @@ class TripRanksController < ApplicationController
 
     respond_to do |format|
       if @trip_rank.save
-        format.html { redirect_to @trip_rank, notice: 'Trip rank was successfully created.' }
+        format.html { redirect_to trip_ranks_path, notice: 'Trip rank was successfully created.' }
         format.json { render :show, status: :created, location: @trip_rank }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class TripRanksController < ApplicationController
   def update
     respond_to do |format|
       if @trip_rank.update(trip_rank_params)
-        format.html { redirect_to @trip_rank, notice: 'Trip rank was successfully updated.' }
+        format.html { redirect_to trip_ranks_path, notice: 'Trip rank was successfully updated.' }
         format.json { render :show, status: :ok, location: @trip_rank }
       else
         format.html { render :edit }

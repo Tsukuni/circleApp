@@ -30,7 +30,7 @@ class JobRanksController < ApplicationController
 
     respond_to do |format|
       if @job_rank.save
-        format.html { redirect_to @job_rank, notice: 'Job rank was successfully created.' }
+        format.html { redirect_to job_ranks_path, notice: 'Job rank was successfully created.' }
         format.json { render :show, status: :created, location: @job_rank }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class JobRanksController < ApplicationController
   def update
     respond_to do |format|
       if @job_rank.update(job_rank_params)
-        format.html { redirect_to @job_rank, notice: 'Job rank was successfully updated.' }
+        format.html { redirect_to job_ranks_path, notice: 'Job rank was successfully updated.' }
         format.json { render :show, status: :ok, location: @job_rank }
       else
         format.html { render :edit }
