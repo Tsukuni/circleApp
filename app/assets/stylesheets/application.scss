@@ -148,8 +148,9 @@ body{
   position: relative;
 }
 .advice::before{
+  padding-top:60px;
 	/* 透過した黒を重ねる */
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.1);
 	/* どの範囲に重ねるかを指定 */
 	position: absolute;
 	top: 0;
@@ -190,7 +191,9 @@ body{
   left: 0px;
   margin: auto;
   width:80%;
+  height:500px;
 }
+
 .building{
   position:absolute;
   margin-left:20%;
@@ -204,4 +207,70 @@ body{
   line-height:25px;
   text-align: left;
 
+}
+
+/*Map Imade*/
+.maptitle {
+  background-image: image-url("map.jpg");
+  height:100vh;
+  width:100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.maptitle::before{
+	/* 透過した黒を重ねる */
+	background-color: rgba(0,0,0,0.5);
+	/* どの範囲に重ねるかを指定 */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+}
+
+.mapbox{
+  padding-top:120px;
+  width:100%;
+  position: absolute;
+  text-align: center;
+}
+.mapTitle{
+  text-align: center;
+  text-decoration: none;
+  padding:10px;
+}
+.mapTitle a{
+  text-decoration: none;
+  color:white;
+  font-size:30px;
+}
+.mapTitle a:hover{
+  background-color:transparent;
+  color:white
+}
+
+.mapTitle h1,p,a{
+  color: white;
+}
+.mapTitle a:link {
+color: white;
+}
+
+.mapTitle a:visited {
+color:white;
+}
+
+.mapTitle a:hover {
+color: white;
+}
+
+.mapTitle a:active {
+color:white;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+ /* スマホ用のCSS */
 }

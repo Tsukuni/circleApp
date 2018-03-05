@@ -11,7 +11,6 @@
 }
 .topImage::before{
 	/* 透過した黒を重ねる */
-	background-color: rgba(0,0,0,0.1);
 	/* どの範囲に重ねるかを指定 */
 	position: absolute;
 	top: 0;
@@ -22,7 +21,7 @@
 }
 
 .box{
-  padding-top:50px;
+  padding-top:60px;
   width:100%;
   position: absolute;
   text-align: center;
@@ -35,30 +34,31 @@
 }
 .toptitle a{
   text-decoration: none;
-  color:white;
+  color:#001E4C;
   font-size:30px;
 }
 .toptitle a:hover{
   background-color:transparent;
+  color:#001E4C
 }
 .box p {
   font-size:30px;
 }
-.box h1,p,a{
-  color: white;
+.toptitle h1,p,a{
+  color: #001E4C;
 }
-.box a:link {
-color: white;
-}
-
-.box a:visited {
-color: white;
+.toptitle a:link {
+color: #001E4C;
 }
 
-.box a:hover {
-color: white;
+.toptitle a:visited {
+color:#001E4C;
 }
 
-.box a:active {
-color: white;
+.toptitle a:hover {
+color: #0047B2;
+}
+
+.toptitle a:active {
+color: #001E4C;
 }

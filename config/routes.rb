@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'maps/kyotanabe'
-
   get 'maps/imadegawa'
+  get 'maps/index'
+  get 'maps/karasuma'
+  get 'maps/kanbaikan'
+  get 'maps/shinmachi'
 
   resources :women_snaps
   resources :men_snaps
