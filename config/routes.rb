@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'maps/kyotanabe'
+
+  get 'maps/imadegawa'
+
   resources :women_snaps
   resources :men_snaps
   resources :fashion_ranks

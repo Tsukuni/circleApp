@@ -21,7 +21,7 @@
 body{
   padding:0;
   margin:0;
-  background-color:#EAEAE0
+  background-color:white
 }
 /*管理ページ*/
 
@@ -114,7 +114,7 @@ body{
 .logo{
   position:fixed;
   z-index:3;
-  padding-left:20px;
+  margin-left:20px;
   height:70px;
 }
 
@@ -163,4 +163,45 @@ body{
   width:100%;
   position: absolute;
   text-align: center;
+}
+
+.reset{
+  padding:0;
+  margin:0;
+}
+
+/*MAP*/
+#kyotanabe{
+  padding-top:60px;
+}
+.centerMap{
+  text-align: center;
+}
+
+.kyotanabeMap{
+  width:100%;
+  height:60%;
+}
+.kyotanabe{
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  width:80%;
+}
+.building{
+  position:absolute;
+  margin-left:20%;
+
+  width:80%;
+}
+
+.building ul{
+  list-style: none;
+  font-size:15px;
+  line-height:25px;
+  text-align: left;
+
 }
