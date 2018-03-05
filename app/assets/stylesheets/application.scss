@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 
@@ -111,6 +111,14 @@ body{
 }
 
 
+.logo{
+  position:fixed;
+  z-index:3;
+  padding-left:20px;
+  height:70px;
+}
+
+
 /*mainpage*/
 #adminpage:after{
   content: "";
@@ -128,4 +136,31 @@ body{
 
 #adminBox{
   padding:15px;
+}
+
+/*advicePage*/
+.advice {
+  background-image: image-url("life.jpg");
+  height:100vh;
+  width:100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.advice::before{
+	/* 透過した黒を重ねる */
+	background-color: rgba(0,0,0,0.5);
+	/* どの範囲に重ねるかを指定 */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+}
+
+.advicebox{
+  width:100%;
+  position: absolute;
+  text-align: center;
 }
