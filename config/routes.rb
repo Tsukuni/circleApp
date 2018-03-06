@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   get 'maps/kanbaikan'
   get 'maps/shinmachi'
 
+  get 'advices/capacities'
+  get 'advices/languages'
+  get 'advices/words'
+  get 'advices/exams'
+  get 'advices/welcome'
+  get 'advices/loves'
+
   resources :women_snaps
   resources :men_snaps
   resources :fashion_ranks
