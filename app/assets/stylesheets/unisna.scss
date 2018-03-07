@@ -1,0 +1,43 @@
+// Place all the styles related to the Unisna controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.unisnaContainer{
+  margin-top:20px;
+  width:100vw;
+  display: flex;
+  .mensBox{
+    width:40%;
+    margin-left:10%;
+    padding:50px
+  }
+  .menBottom{
+    margin-top:50px;
+    margin-bottom:50px;
+    border-radius: 5px;
+    background-color:#c5cae9;
+  }
+  .mensBox img{
+
+    width:100%;
+    height:600px;
+  }
+  .womensBox{
+    width:40%;
+
+    padding:50px;
+  }
+  .womenBottom{
+    margin-top:50px;
+    border-radius: 5px;
+
+    background-color:#ffcdd2;
+    margin-bottom:50px;
+  }
+  .womensBox img{
+    width:100%;
+    height:600px;
+  }
+  .unisnaBox{
+    padding:10px;
+  }
+}

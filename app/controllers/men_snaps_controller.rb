@@ -71,7 +71,7 @@ class MenSnapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def men_snap_params
-      params.require(:men_snap).permit(:men_image, :name)
+      params.require(:men_snap).permit(:men_image, :name,:gakubu,:grade,:circle,:content)
     end
     def login_check
       if session[:user_id].nil?
