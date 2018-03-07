@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307095650) do
+ActiveRecord::Schema.define(version: 20180307122620) do
 
   create_table "campus_lives", force: :cascade do |t|
     t.string "image1"
@@ -150,6 +150,10 @@ ActiveRecord::Schema.define(version: 20180307095650) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gakubu"
+    t.integer "grade"
+    t.string "circle"
+    t.text "content"
   end
 
   create_table "school_ranks", force: :cascade do |t|
@@ -197,6 +201,10 @@ ActiveRecord::Schema.define(version: 20180307095650) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gakubu"
+    t.integer "grade"
+    t.string "circle"
+    t.text "content"
   end
 
   create_table "words", force: :cascade do |t|

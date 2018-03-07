@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'unisna/index'
+
   resources :map_urls
   get 'dosihsha_ranks/index'
 

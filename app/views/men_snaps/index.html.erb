@@ -1,5 +1,5 @@
 <h3>スナップ</h3>
-<div class="col-md-6 adBox">
+<div class="col-md-7 adBox">
   <h4>Men</h4>
   <% @men_snaps.each do |men_snap| %>
     <table class="table">
@@ -11,6 +11,22 @@
       <tr>
         <th scope="row">名前</th>
         <td><%= men_snap.name %></td>
+      </tr>
+      <tr>
+        <th scope="row">学部</th>
+        <td><%= men_snap.gakubu%>学部</td>
+      </tr>
+      <tr>
+        <th scope="row">回生</th>
+        <td><%= men_snap.grade %>回生</td>
+      </tr>
+      <tr>
+        <th scope="row">サークル</th>
+        <td><%= men_snap.circle%></td>
+      </tr>
+      <tr>
+        <th scope="row">ポイント</th>
+        <td><%= men_snap.content %></td>
       </tr>
     </table>
   <%end%>

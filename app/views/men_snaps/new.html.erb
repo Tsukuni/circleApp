@@ -11,7 +11,24 @@
       </tr>
       <tr>
         <th scope="row">名前</th>
-        <td><%= f.text_field :name %></td>
+        <td><%= f.text_field :name ,class: "form-control"%></td>
+      </tr>
+
+      <tr>
+        <th scope="row">学部</th>
+        <td><%= f.text_field :gakubu ,class: "form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">回生</th>
+        <td><%= f.number_field :grade ,class: "form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">サークル</th>
+        <td><%= f.text_field :circle ,class: "form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">ポイント</th>
+        <td><%= f.text_area :content ,class: "form-control" %></td>
       </tr>
     </table>
     <%= f.submit "送信" ,class: "btn button" %>

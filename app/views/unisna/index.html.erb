@@ -1,0 +1,38 @@
+<div class="adviceHeader">
+  <%=image_tag('unisna.jpg')%>
+  <h2>Unisna</h2>
+</div>
+<div class="unisnaContainer">
+  <div class="mensBox">
+    <h2>MEN</h2>
+    <%@men_snaps.each do |f| %>
+      <div class="menBottom">
+       <div><%=image_tag(f.men_image)%></div>
+        <div class="unisnaBox">
+          <h3><%=f.name%></h3>
+          <p><%=f.grade%>回生 <%=f.gakubu%>学部<p>
+            <h5>所属サークル</h5>
+          <p><%=f.circle%></p>
+          <h5>ファッションポイント</h5>
+          <p><%=simple_format(f.content)%></p>
+        </div>
+      </div>
+    <%end%>
+  </div>
+  <div class="womensBox">
+    <h2>WOMEN</h2>
+    <%@women_snaps.each do |f| %>
+        <div class="womenBottom">
+       <div><%=image_tag(f.women_image)%></div>
+        <div class="unisnaBox">
+          <h3><%=f.name%></h3>
+          <p><%=f.grade%>回生 <%=f.gakubu%>学部<p>
+          <h5>所属サークル</h5>
+          <p><%=f.circle%></p>
+          <h5>ファッションポイント</h5>
+          <p><%=simple_format(f.content)%></p>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
