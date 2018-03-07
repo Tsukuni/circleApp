@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304082233) do
+ActiveRecord::Schema.define(version: 20180307095650) do
 
   create_table "campus_lives", force: :cascade do |t|
     t.string "image1"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180304082233) do
     t.string "rank3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "question"
   end
 
   create_table "capacities", force: :cascade do |t|
@@ -134,6 +135,12 @@ ActiveRecord::Schema.define(version: 20180304082233) do
     t.string "image2"
     t.string "image3"
     t.string "image4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "map_urls", force: :cascade do |t|
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

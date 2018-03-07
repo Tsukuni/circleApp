@@ -1,0 +1,41 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>資格・就職</h2>
+</div>
+<div class="loveContainer1">
+  <div class="loveimage1">
+    <%@capacities.each do |obj| %>
+      <%=image_tag(obj.capa_image1)%>
+    <%end%>
+  </div>
+  <div class="loveimage2">
+    <%@capacities.each do |obj| %>
+      <%=image_tag(obj.capa_image2)%>
+    <%end%>
+  </div>
+<div>
+
+<div class="loveContainer2">
+  <div class="loveimage1">
+    <%@capacities.each do |obj| %>
+      <%=image_tag(obj.capa_image3)%>
+    <%end%>
+  </div>
+  <div class="loveimage2">
+    <%@capacities.each do |obj| %>
+      <%=image_tag(obj.capa_image4)%>
+    <%end%>
+  </div>
+</div>
+<div class="loveContainer1">
+  <div class="loveimage1">
+    <%@capacities.each do |obj| %>
+      <%=image_tag(obj.capa_image5)%>
+    <%end%>
+  </div>
+  <div class="loveimage2">
+    <%@capacities.each do |obj| %>
+      <%=image_tag(obj.capa_image6)%>
+    <%end%>
+  </div>
+<div>

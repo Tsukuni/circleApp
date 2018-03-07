@@ -1,0 +1,29 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>新歓期</h2>
+</div>
+<div class="loveContainer1">
+  <div class="loveimage1">
+    <%@campus_lives.each do |obj| %>
+      <%=image_tag(obj.campus_image1)%>
+    <%end%>
+  </div>
+  <div class="loveimage2">
+    <%@campus_lives.each do |obj| %>
+      <%=image_tag(obj.campus_image2)%>
+    <%end%>
+  </div>
+<div>
+  <div class="campusContainer1">
+    <%@campus_ranks.each do |obj| %>
+      <div class="campusBox">
+        <div class="campusRank">
+          <h2><%=obj.question%></h2>
+          <br/>
+          <h4>1位　<%=obj.rank1%></h4>
+          <h4>2位　<%=obj.rank2%></h4>
+          <h4>3位　<%=obj.rank3%></h4>
+        </div>
+      </div>
+    <%end%>
+  <div>

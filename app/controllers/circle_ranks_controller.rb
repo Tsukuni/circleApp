@@ -71,7 +71,7 @@ class CircleRanksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def circle_rank_params
-      params.require(:circle_rank).permit(:qestion1, :qestion2, :qestion3, :qt1_rank1, :qt1_rank2, :qt1_rank3, :qt2_rank1, :qt2_rank2, :qt2_rank3, :qt3_rank1, :qt3_rank2, :qt3_rank3)
+      params.require(:circle_rank).permit(:qestion1, :qestion2, :qestion3, :qt1_rank1, :qt1_rank2, :qt1_rank3, :qt2_rank1, :qt2_rank2, :qt2_rank3, :qt3_rank1, :qt3_rank2, :qt3_rank3, :content)
     end
     def login_check
       if session[:user_id].nil?

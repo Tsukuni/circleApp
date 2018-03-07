@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
+  resources :map_urls
+  get 'dosihsha_ranks/index'
+
   get 'maps/kyotanabe'
   get 'maps/imadegawa'
   get 'maps/index'
   get 'maps/karasuma'
   get 'maps/kanbaikan'
   get 'maps/shinmachi'
+
+  get 'advices/capacities'
+  get 'advices/languages'
+  get 'advices/words'
+  get 'advices/exams'
+  get 'advices/welcome'
+  get 'advices/loves'
 
   resources :women_snaps
   resources :men_snaps

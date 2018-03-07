@@ -1,0 +1,2 @@
+module DosihshaRanksHelper
+end

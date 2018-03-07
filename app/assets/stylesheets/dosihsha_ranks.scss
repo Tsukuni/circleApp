@@ -1,0 +1,16 @@
+// Place all the styles related to the DosihshaRanks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.doshishaRanks{
+  width:100vw;
+}
+.doshishaRanksBox{
+  padding-top:50px;
+  padding-bottom:50px;
+  width:60%;
+  padding-left: 20%;
+}
+
+.doshishaRanks:nth-child(even){
+  background-color: #eeeeee;
+}

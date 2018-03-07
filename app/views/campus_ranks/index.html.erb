@@ -4,9 +4,13 @@
   <% @campus_ranks.each do |obj| %>
     <table class="table">
       <tr>
-        <th scope="row">1位</th>
-        <td><%= obj.rank1 %><span class="button"><%= link_to '削除',campus_rank_path(obj.id),method: :delete%></span>
+        <th scope="row">質問</th>
+        <td><%= obj.question %><span class="button"><%= link_to '削除',campus_rank_path(obj.id),method: :delete%></span>
         <span class="button"><%= link_to '編集',edit_campus_rank_path(obj.id)%></td>
+      </tr>
+      <tr>
+        <th scope="row">1位</th>
+        <td><%= obj.rank1 %></td>
       </tr>
       <tr>
         <th scope="row">2位</th>

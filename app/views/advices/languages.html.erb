@@ -1,0 +1,70 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>第二言語</h2>
+</div>
+<div class="secondLanguageintro">
+  <h3>第二言語とは・・</h3>
+  <br>
+  <%@languages.each do |obj|%>
+    <p><%=simple_format(h(obj.context))%></p>
+  <%end%>
+</div>
+<div class="secondBox1">
+  <div class="secondLanguageImage">
+    <%@languages.each do |obj|%>
+      <p><%=image_tag(obj.image)%></p>
+    <%end%>
+  </div>
+</div>
+<div class="secondBox2">
+  <h3>第二言語難易度</h3>
+  <div class="languageTableBox">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>言語</th>
+          <th>すごく簡単</th>
+          <th>簡単</th>
+          <th>普通</th>
+          <th>難しい</th>
+          <th>すごく難しい</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%@words.each do |obj|%>
+          <tr>
+            <td><%=obj.name%></td>
+            <td><%=obj.veryEasy%>%</td>
+            <td><%=obj.easy%>%</td>
+            <td><%=obj.normal%>%</td>
+            <td><%=obj.hard%>%</td>
+            <td><%=obj.veryHard%>%</td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div>
+<div class="secondBox">
+  <h3>各言語オススメポイント</h3>
+  <div class="languageTableBox">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>言語</th>
+          <th>おすすめポイント</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%@words.each do |obj|%>
+          <tr>
+            <td><%=obj.name%></td>
+            <td><%=simple_format(obj.context)%></td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>

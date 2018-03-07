@@ -1,0 +1,45 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>恋愛</h2>
+</div>
+<div class="loveContainer1">
+  <div class="loveimage1">
+    <%@loves.each do |obj| %>
+      <%=image_tag(obj.image1)%>
+    <%end%>
+  </div>
+  <div class="loveimage2">
+    <%@loves.each do |obj| %>
+      <%=image_tag(obj.image2)%>
+    <%end%>
+  </div>
+<div>
+
+<div class="loveContainer2">
+  <div class="loveimage1">
+    <%@loves.each do |obj| %>
+      <%=image_tag(obj.image3)%>
+    <%end%>
+  </div>
+  <div class="loveimage2">
+    <%@loves.each do |obj| %>
+      <%=image_tag(obj.image4)%>
+    <%end%>
+  </div>
+</div>
+
+<div class="loveContainer1">
+  <h3>おすすめデートスポット</h3>
+  <%@date_places.each do |obj| %>
+    <div class="dateBox">
+      <div class="loveBox1">
+        <h4><%= link_to obj.name,obj.url %></h4>
+        <p class="loveBold">おすすめポイント！<p>
+        <p><%=simple_format(obj.context)%></p>
+      </div>
+      <div class="loveBox2">
+          <%= image_tag(obj.place_image) %>
+      </div>
+    </div>
+  <%end%>
+<div>

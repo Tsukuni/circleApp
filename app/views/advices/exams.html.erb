@@ -1,0 +1,20 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>テスト</h2>
+</div>
+<div class="wordContainer1">
+  <div class="wordBox1">
+    <h3>大学のテストは高校と何が違う？</h3>
+  <br/>
+      <%@exam_comments.each do |obj| %>
+        <h4>・<%=obj.context%></h4>
+      <%end%>
+  </div>
+</div>
+<div class="wordContainer2">
+  <div class="wordBox2">
+      <%@exams.each do |obj| %>
+        <%=image_tag(obj.exam_image)%>
+      <%end%>
+  </div>
+</div>
