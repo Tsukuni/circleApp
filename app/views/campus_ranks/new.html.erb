@@ -1,5 +1,28 @@
-<h1>New Campus Rank</h1>
-
-<%= render 'form', campus_rank: @campus_rank %>
-
-<%= link_to 'Back', campus_ranks_path %>
+<div class="col-md-12">
+  <h3>ランキング</h3>
+</div>
+<div>
+  <%=form_for @campus_rank do |f| %>
+  <div class="col-md-6 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">質問</th>
+        <td><%= f.text_field :question ,class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">1位</th>
+        <td><%= f.text_field :rank1 ,class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">2位</th>
+        <td><%= f.text_field :rank2 ,class:"form-control"%></td>
+      </tr>
+      <tr>
+        <th scope="row">3位</th>
+        <td><%= f.text_field :rank3 ,class:"form-control"%></td>
+      </tr>
+    </table>
+    <%= f.submit "送信" ,class: "btn button" %>
+  </div>
+  <% end %>
+</div>

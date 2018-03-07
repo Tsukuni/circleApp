@@ -1,0 +1,17 @@
+<div class="col-md-12">
+  <h3>編集</h3>
+</div>
+<div>
+  <%=form_for @map_url do |f| %>
+  <div class="col-md-6 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">URL</th>
+        <td><%= f.text_field :url %></td>
+      </tr>
+      <tr>
+    </table>
+    <%= f.submit "送信" ,class: "btn" %>
+  </div>
+  <% end %>
+</div>

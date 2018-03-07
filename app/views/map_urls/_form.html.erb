@@ -1,0 +1,22 @@
+<%= form_with(model: map_url, local: true) do |form| %>
+  <% if map_url.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(map_url.errors.count, "error") %> prohibited this map_url from being saved:</h2>
+
+      <ul>
+      <% map_url.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :map_url_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

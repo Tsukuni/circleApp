@@ -1,0 +1,2 @@
+module MapUrlsHelper
+end

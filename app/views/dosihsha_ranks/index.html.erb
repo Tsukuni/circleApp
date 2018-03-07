@@ -1,0 +1,118 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>Doshisha × Ranking</h2>
+</div>
+<div class="doshishaRanks">
+  <div class="doshishaRanksBox">
+      <h3>サークル・クラブ</h3>
+      <br/>
+      <%@circle_ranks.each do |obj| %>
+        <h4>質問　<%=obj.qestion1%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt1_rank1%></p>
+        <p>2位　<%=obj.qt1_rank2%></p>
+        <p>3位　<%=obj.qt1_rank3%></p>
+        <br/>
+        <h4>質問　<%=obj.qestion2%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt2_rank1%></p>
+        <p>2位　<%=obj.qt2_rank2%></p>
+        <p>3位　<%=obj.qt2_rank3%></p>
+        <br/>
+        <h4>質問　<%=obj.qestion3%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt3_rank1%></p>
+        <p>2位　<%=obj.qt3_rank2%></p>
+        <p>3位　<%=obj.qt3_rank3%></p>
+        <br/>
+        <h4>一言！</h4>
+        <p><%=simple_format(obj.content)%></p>
+      <% end %>
+  </div>
+</div>
+<div class="doshishaRanks">
+  <div class="doshishaRanksBox">
+      <h3>バイト</h3>
+      <br/>
+      <%@job_ranks.each do |obj| %>
+        <h4>質問　<%=obj.qestion1%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt1_rank1%></p>
+        <p>2位　<%=obj.qt1_rank2%></p>
+        <p>3位　<%=obj.qt1_rank3%></p>
+        <br/>
+        <h4>質問　<%=obj.qestion2%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt2_rank1%></p>
+        <p>2位　<%=obj.qt2_rank2%></p>
+        <p>3位　<%=obj.qt2_rank3%></p>
+        <br/>
+        <h4>一言！</h4>
+        <p><%=simple_format(obj.content)%></p>
+      <% end %>
+  </div>
+</div>
+<div class="doshishaRanks">
+  <div class="doshishaRanksBox">
+      <h3>学校</h3>
+      <br/>
+      <%@school_ranks.each do |obj| %>
+        <h4>質問　<%=obj.qestion1%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt1_rank1%></p>
+        <p>2位　<%=obj.qt1_rank2%></p>
+        <p>3位　<%=obj.qt1_rank3%></p>
+        <br/>
+        <h4>質問　<%=obj.qestion2%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt2_rank1%></p>
+        <p>2位　<%=obj.qt2_rank2%></p>
+        <p>3位　<%=obj.qt2_rank3%></p>
+        <br/>
+        <h4>一言！</h4>
+        <p><%=simple_format(obj.content)%></p>
+      <% end %>
+  </div>
+</div>
+<div class="doshishaRanks">
+  <div class="doshishaRanksBox">
+      <h3>ファッション</h3>
+      <br/>
+      <%@fashion_ranks.each do |obj| %>
+        <h4>質問　<%=obj.qestion1%></h4>
+        <h4>男子の回答</h4>
+        <p>1位　<%=obj.men_rank1%></p>
+        <p>2位　<%=obj.men_rank2%></p>
+        <p>3位　<%=obj.men_rank3%></p>
+        <h4>女子の回答</h4>
+        <p>1位　<%=obj.women_rank1%></p>
+        <p>2位　<%=obj.women_rank2%></p>
+        <p>3位　<%=obj.women_rank3%></p>
+        <br/>
+        <h4>質問　<%=obj.qestion2%></h4>
+        <h4>女子の回答</h4>
+        <p>1位　<%=obj.qt2_rank1%></p>
+        <p>2位　<%=obj.qt2_rank2%></p>
+        <p>3位　<%=obj.qt2_rank3%></p>
+        <br/>
+        <h4>一言！</h4>
+        <p><%=simple_format(obj.content)%></p>
+      <% end %>
+  </div>
+</div>
+<div class="doshishaRanks">
+  <div class="doshishaRanksBox">
+      <h3>旅行</h3>
+      <br/>
+      <%@trip_ranks.each do |obj| %>
+        <h4>質問　<%=obj.qestion1%></h4>
+        <h4>回答</h4>
+        <p>1位　<%=obj.qt1_rank1%></p>
+        <p>2位　<%=obj.qt1_rank2%></p>
+        <p>3位　<%=obj.qt1_rank3%></p>
+        <br/>
+        <h4>一言！</h4>
+        <p><%=simple_format(obj.content)%></p>
+      <% end %>
+  </div>
+</div>

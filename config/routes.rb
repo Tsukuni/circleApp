@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :map_urls
+  get 'dosihsha_ranks/index'
+
   get 'maps/kyotanabe'
   get 'maps/imadegawa'
   get 'maps/index'

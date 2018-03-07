@@ -1,4 +1,33 @@
 <div class="adviceHeader">
   <%=image_tag('life.jpg')%>
-  <h2>テスト</h2>
+  <h2>大学生の用語</h2>
+</div>
+<div class="wordContainer1">
+  <div class="wordBox1">
+    <h3>大学生になってはじめて聞いた言葉は？？</h3>
+  <br/>
+      <%@universityWords.each do |obj| %>
+        <h3>1位: <%=obj.rank1%></h3>
+        <h3>2位: <%=obj.rank2%></h3>
+        <h3>3位: <%=obj.rank3%></h3>
+      <%end%>
+  </div>
+</div>
+<div class="wordContainer2">
+
+  <div class="wordBox2">
+    <h3>知っておくべき用語集</h3>
+    <br/>
+    <ul>
+      <%@introduceUniversityWords.each do |obj| %>
+        <div class="listBox">
+          <li><span class="bold">用語</span>　<span class="listText"><%=obj.title%></span></li>
+          <ul>
+            <li><span class="bold">意味</span>　<span class="listText"><%=obj.meaning%></span></li>
+            <li><span class="bold">例文</span>　<span class="listText"><%=obj.example%></span></li>
+          </ul>
+        </div>
+      <%end%>
+    </ul>
+  </div>
 </div>
