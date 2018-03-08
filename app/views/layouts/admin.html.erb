@@ -5,13 +5,18 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+
   </head>
 
   <body>
     <div id="adminheader">
       <div id="admintitle">管理ページ</div>
-      <div id="adminbar"></div>
+      <div id="adminbar">
+      <% if current_user.nil? %>
+      <% else %>
+        <p><%= link_to "ログアウト", session_path(current_user.id), method: :delete, data: { confirm: 'ログアウトしますか？' } %></p>
+      <% end %>
+    </div>
     </div>
     <div id="adminpage">
       <div id="adminMenu">

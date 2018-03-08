@@ -1,5 +1,7 @@
+<div class="login">
 <% if current_user.nil? %>
-  <%= link_to "ログイン", new_session_path %>
+  <h1><%= link_to "ログインはこちら", new_session_path %></h1>
 <% else %>
-  <%= link_to "ログアウト", session_path(current_user.id), method: :delete, data: { confirm: 'ログアウトしますか？' } %>
+  <h1><%= link_to "ログアウト", session_path(current_user.id), method: :delete, data: { confirm: 'ログアウトしますか？' } %></h1>
 <% end %>
+</div>

@@ -1,16 +1,22 @@
 <h3>第二言語</h3>
-<div id="secondLanguage" class="col-md-5">
-  <h4>第二言語とは・・・</h4>
+<div id="secondLanguage" class="col-md-6">
+  <h4>第二言語とは</h4>
   <% @languages.each do |obj| %>
-      <span class="fontsize"><%= obj.context %></span>
-      <span class="button"><%= link_to '削除',language_path(obj.id),method: :delete%></span>
-      <span class="button"><%= link_to '編集',edit_language_path(obj.id)%></span>
-      <div><%= image_tag obj.image,class:"resize"%></div>
-  <%end%>
-
+      <table class="table">
+        <tr>
+          <th scope="row">説明　</th>
+          <td><%= obj.context%><span class="button"><%= link_to '削除',language_path(obj.id),method: :delete%></span>
+          <span class="button"><%= link_to '編集',edit_language_path(obj.id)%></span></td>
+        </tr>
+        <tr>
+          <th scope="row">グラフ</th>
+          <td><%= image_tag obj.image,class:"resize"%></td>
+        </tr>
+      </table>
+      <%end%>
   <div><%= link_to '新規作成',new_language_url%></div>
 </div>
-<div id="Language" class="col-md-6">
+<div id="Language" class="col-md-5">
   <h4>第二言語ランキング</h4>
   <% @words.each do |obj| %>
     <table class="table">

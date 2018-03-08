@@ -1,14 +1,19 @@
-<h1>ログイン</h1>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :mail, 'login name' %>
-    <%= text_field_tag :mail, params[:mail] %>
+<div class="login1">
+
+  <div class="loginBox">
+    <h1>ログイン</h1>
+    <%= form_tag sessions_path do %>
+      <div class="loginField">
+        <%= label_tag :mail, 'login name' %>
+        <%= text_field_tag :mail, params[:mail] ,class:"form-control"%>
+      </div>
+      <div class="loginField">
+        <%= label_tag :pass, 'password' %>
+        <%= password_field_tag :pass , params[:pass],class:"form-control"%>
+      </div>
+      <div class="actions">
+        <%= submit_tag "ログイン",class:"btn" %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= label_tag :pass, 'password' %>
-    <%= password_field_tag :pass , params[:pass]%>
-  </div>
-  <div class="actions">
-    <%= submit_tag "ログイン" %>
-  </div>
-<% end %>
+</div>
