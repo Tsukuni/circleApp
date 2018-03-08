@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307122620) do
+ActiveRecord::Schema.define(version: 20180308103836) do
 
   create_table "campus_lives", force: :cascade do |t|
     t.string "image1"
@@ -154,6 +154,13 @@ ActiveRecord::Schema.define(version: 20180307122620) do
     t.integer "grade"
     t.string "circle"
     t.text "content"
+  end
+
+  create_table "ori_pages", force: :cascade do |t|
+    t.string "ori_photo1"
+    t.string "ori_photo2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "school_ranks", force: :cascade do |t|

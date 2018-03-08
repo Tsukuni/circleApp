@@ -30,28 +30,54 @@ body{
 /*管理ページ*/
 
 /*header*/
+@media only screen and (max-width: 800px) {
+  #footer{
+    padding-top:50px;
+    padding-bottom:20px;
+    width:100vw;
+    background-color: #464646;
+    height:200px;
 
-#footer{
-  padding-top:50px;
-  padding-bottom:20px;
-  width:100vw;
-  background-color: #464646;
-  height:200px;
 
+  }
+
+  #footerBox{
+    width:300px;
+    margin:10px;
+    a:hover{
+      background-color:transparent
+    }
+    p{
+      font-size:9px;
+      color:white;
+    }
+  }
 
 }
+@media only screen and (min-width: 801px) {
+  #footer{
+    padding-top:50px;
+    padding-bottom:20px;
+    width:100vw;
+    background-color: #464646;
+    height:200px;
 
-#footerBox{
-  float:right;
-  width:400px;
-  margin:10px;
-  a:hover{
-    background-color:transparent
+
   }
-  p{
-    font-size:11px;
-    color:white;
+
+  #footerBox{
+    float:right;
+    width:400px;
+    margin:10px;
+    a:hover{
+      background-color:transparent
+    }
+    p{
+      font-size:11px;
+      color:white;
+    }
   }
+
 }
 
 .hm_menu_check {/* チェックボックスを隠す */
@@ -342,44 +368,73 @@ body{
 }
 
 /*MAP*/
-#kyotanabe{
-  padding-top:60px;
-}
-.centerMap{
-  text-align: center;
-}
 
-.kyotanabeMap{
-  width:100%;
-  height:60%;
-}
-.kyotanabe{
-  position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  margin: auto;
-  width:80%;
-  height:500px;
-}
-
-.building{
-  position:absolute;
-  margin-left:20%;
-
-  width:80%;
-}
-
-.building ul{
-  list-style: none;
-  font-size:15px;
-  line-height:25px;
-  text-align: left;
-
-}
 
 /*Map Imade*/
+@media only screen and (max-width: 800px) {
+  #kyotanabe{
+    padding-top:60px;
+    width:100vw;
+  }
+  .centerMap{
+    text-align: center;
+  }
+
+  .kyotanabeMap{
+    width:100%;
+  }
+  .kyotanabe{
+    width:100%;
+    height:400px;
+  }
+
+  .building{
+    margin-left:20px;
+    margin-bottom:50px;
+    margin-top:50px;
+    width:80%;
+  }
+
+  .building ul{
+    list-style: none;
+    font-size:15px;
+    line-height:25px;
+    text-align: left;
+
+  }
+}
+@media only screen and (min-width: 801px) {
+  #kyotanabe{
+    padding-top:60px;
+    width:100vw;
+  }
+  .centerMap{
+    text-align: center;
+  }
+
+  .kyotanabeMap{
+    width:100%;
+  }
+  .kyotanabe{
+  width:100%;
+  height:550px;
+  }
+
+  .building{
+    margin-left:20%;
+    margin-bottom:50px;
+    margin-top:50px;
+    width:80%;
+  }
+
+  .building ul{
+    list-style: none;
+    font-size:15px;
+    line-height:25px;
+    text-align: left;
+
+  }
+}
 .maptitle {
   background-image: image-url("map.JPG");
   height:100vh;
@@ -438,9 +493,4 @@ color: white;
 
 .mapTitle a:active {
 color:white;
-}
-
-
-@media only screen and (max-device-width: 480px) {
- /* スマホ用のCSS */
 }

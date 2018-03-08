@@ -1,43 +1,85 @@
 // Place all the styles related to the Unisna controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.unisnaContainer{
-  margin-top:20px;
-  width:100vw;
-  display: flex;
-  .mensBox{
-    width:40%;
-    margin-left:10%;
-    padding:50px
-  }
-  .menBottom{
-    margin-top:50px;
-    margin-bottom:50px;
-    border-radius: 5px;
-    background-color:#c5cae9;
-  }
-  .mensBox img{
+@media only screen and (max-width: 900px) {
+  .unisnaContainer{
+    margin-top:20px;
+    width:100vw;
+    .mensBox{
+      width:100%;
 
-    width:100%;
-    height:500px;
-  }
-  .womensBox{
-    width:40%;
+      padding:10px
+    }
+    .menBottom{
+      margin-top:50px;
+      margin-bottom:50px;
+      border-radius: 5px;
+      background-color: #EEF9FF;
+    }
+    .mensBox img{
+      width:100%;
+    }
+    .womensBox{
+      width:100%;
 
-    padding:50px;
-  }
-  .womenBottom{
-    margin-top:50px;
-    border-radius: 5px;
+      padding:10px;
+    }
+    .womenBottom{
+      margin-top:50px;
+      border-radius: 5px;
 
-    background-color:#ffcdd2;
-    margin-bottom:50px;
+      background-color: #F2D8DF;
+      margin-bottom:50px;
+    }
+    .womensBox img{
+      width:100%;
+    }
+    .unisnaBox{
+      padding:10px;
+    }
   }
-  .womensBox img{
-    width:100%;
-    height:500px;
+
+}
+@media only screen and (min-width: 901px) {
+  .unisnaContainer{
+    margin-top:20px;
+    width:100vw;
+    display: flex;
+    .mensBox{
+      width:40%;
+      margin-left:10%;
+      padding:50px
+    }
+    .menBottom{
+      margin-top:50px;
+      margin-bottom:50px;
+      border-radius: 5px;
+      background-color: #EEF9FF;
+    }
+    .mensBox img{
+
+      width:100%;
+    }
+    .womensBox{
+      width:40%;
+
+      padding:50px;
+    }
+    .womenBottom{
+      margin-top:50px;
+      border-radius: 5px;
+
+      background-color: #F2D8DF;
+      margin-bottom:50px;
+    }
+    .womensBox img{
+      width:100%;
+
+    }
+    .unisnaBox{
+      padding:10px;
+    }
   }
-  .unisnaBox{
-    padding:10px;
-  }
+
+
 }

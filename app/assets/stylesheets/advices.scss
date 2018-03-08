@@ -23,206 +23,412 @@
 }
 
 /*第二言語*/
-.secondLanguageintro{
-  margin-top:50px;
-  margin-left:20%;
-  width:60%;
-  margin-bottom:50px;
-}
-.secondLanguageintro p{
-  font-size:15px;
-}
-
-.secondLanguageImage{
-  padding-top:40px;
-  margin-left:20%;
-  width:60%;
-  padding-bottom:40px;
-}
-
-.secondLanguageImage img{
-  width:100%;
-  height:350px;
-  object-fit: cover;
-}
-
-.secondBox1{
-  width:100vw;
-}
-.secondBox2{
-  padding-top:50px;
-  width:100vw;
-  background-color:#eeeeee;
-  padding-bottom:50px;
-}
-.secondBox2 h3{
-  text-align:center;
-}
-.languageTableBox{
-  background-color: white;
-  border-radius: 5px;
-  padding:5px;
-  margin-top:50px;
-  margin-left:20%;
-  width:60%;
-  margin-bottom:50px;
-}
-.secondBox{
-  padding-top:50px;
-  width:100vw;
-  padding-bottom:50px;
-}
-  .secondBox h3{
-    text-align:center;
-  }
 
   /*大学生の用語*/
 
-.wordContainer1{
-    width:100vw;
-    margin-top:50px;
-    margin-bottom:50px;
-  }
-.wordBox1{
-  width:60%;
-  margin-left:20%;
-}
-
-.wordContainer2{
-    background-color: #eeeeee;
-    width:100vw;
-    padding-top:50px;
-    padding-bottom:50px;
-  }
-.wordBox2{
-  width:60%;
-  margin-left:20%;
-}
-
-.wordBox2 ul{
-  list-style: none;
-}
-
-.wordBox2 img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-}
-.listBox{
-  line-height: 40px;
-  font-size:20px;
-}
-.bold{
-  font-size:20px;
-  line-height: 40px;
-  font-weight: bold;
-}
-
-.listText{
-  font-size:20px;
-  line-height: 40px;
-}
 
 /*恋愛*/
-.loveContainer1{
-  padding-top:50px;
-  padding-bottom:50px;
-  width:100vw;
-  h3{
-    text-align: center;
+@media only screen and (min-width:801px){
+  .secondLanguageintro{
+    margin-top:50px;
+    margin-left:20%;
+    width:60%;
+    margin-bottom:50px;
   }
-}
-.loveimage1{
-  margin-bottom:50px;
-  display:inline-block;
-  margin-left:20%;
-  width:30%;
-}
-.loveimage2{
-  margin-bottom:50px;
-  display:inline-block;
-  width:30%;
-}
-
-.loveimage1 img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  .datetitle{
-    margin-left:20%
+  .secondLanguageintro p{
+    font-size:15px;
   }
-}
 
-.loveimage2 img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-}
-
-.loveContainer2{
-  padding-top:50px;
-  width:100vw;
-  background-color:#eeeeee;
-}
-
-.loveBox1{
-
-  padding-top:50px;
-  padding-bottom:50px;
-  margin-left:20%;
-  width:30%;
-  .loveBold{
-    font-weight: bold;
+  .secondLanguageImage{
+    padding-top:40px;
+    margin-left:20%;
+    width:60%;
+    padding-bottom:40px;
   }
-}
 
-.loveBox1 a{
-  text-decoration: none;
-  color:black;
-}
-.loveBox1 a:hover{
-  background-color: transparent;
-}
+  .secondLanguageImage img{
+    width:100%;
+    height:350px;
+    object-fit: cover;
+  }
+
+  .secondBox1{
+    width:100vw;
+  }
+  .secondBox2{
+    padding-top:50px;
+    width:100vw;
+    background-color:#eeeeee;
+    padding-bottom:50px;
+  }
+  .secondBox2 h3{
+    text-align:center;
+  }
+  .languageTableBox{
+    background-color: white;
+    border-radius: 5px;
+    padding:5px;
+    margin-top:50px;
+    margin-left:20%;
+    width:60%;
+    margin-bottom:50px;
+  }
+  .secondBox{
+    padding-top:50px;
+    width:100vw;
+    padding-bottom:50px;
+  }
+    .secondBox h3{
+      text-align:center;
+    }
 
 
-.loveBox2{
+  .wordContainer1{
+      width:100vw;
+      margin-top:50px;
+      margin-bottom:50px;
+    }
+  .wordBox1{
+    width:60%;
+    margin-left:20%;
+  }
 
-  padding-top:50px;
-  padding-bottom:50px;
-  width:30%;
-  img{
+  .wordContainer2{
+      background-color: #eeeeee;
+      width:100vw;
+      padding-top:50px;
+      padding-bottom:50px;
+    }
+  .wordBox2{
+    width:60%;
+    margin-left:20%;
+  }
+
+  .wordBox2 ul{
+    list-style: none;
+  }
+
+  .wordBox2 img{
     width:100%;
     height:100%;
     object-fit: cover;
   }
-}
+  .listBox{
+    line-height: 40px;
+    font-size:20px;
+  }
+  .bold{
+    font-size:20px;
+    line-height: 40px;
+    font-weight: bold;
+  }
 
-.dateBox{
-  display:flex
+  .listText{
+    font-size:20px;
+    line-height: 40px;
+  }
+
+  .loveContainer1{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:100vw;
+    h3{
+      text-align: center;
+    }
+  }
+  .loveimage1{
+    margin-bottom:50px;
+    display:inline-block;
+    margin-left:20%;
+    width:30%;
+  }
+  .loveimage2{
+    margin-bottom:50px;
+    display:inline-block;
+    width:30%;
+  }
+
+  .loveimage1 img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    .datetitle{
+      margin-left:20%
+    }
+  }
+
+  .loveimage2 img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+
+  .loveContainer2{
+    padding-top:50px;
+    width:100vw;
+    background-color:#eeeeee;
+  }
+
+  .loveBox1{
+
+    padding-top:50px;
+    padding-bottom:50px;
+    margin-left:20%;
+    width:30%;
+    .loveBold{
+      font-weight: bold;
+    }
+  }
+
+  .loveBox1 a{
+    text-decoration: none;
+    color:black;
+  }
+  .loveBox1 a:hover{
+    background-color: transparent;
+  }
+
+
+  .loveBox2{
+
+    padding-top:50px;
+    padding-bottom:50px;
+    width:30%;
+    img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+
+  .dateBox{
+    display:flex
+  }
+  .dateBox:nth-child(odd){
+    background-color:#eeeeee;
+  }
+  .campusContainer1{
+      width:100vw;
+      margin-top:50px;
+      margin-bottom:50px;
+  }
+
+  .campusBox{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:100%;
+  }
+
+  .campusRank{
+      width:60%;
+      padding-left:20%;
+  }
+
+  .campusBox:nth-child(odd){
+    background-color:#eeeeee
+  }
+
 }
-.dateBox:nth-child(odd){
-  background-color:#eeeeee;
-}
+@media only screen and (max-width: 800px) {
+  .secondLanguageintro{
+    margin-top:50px;
+    margin-left:10%;
+    width:80%;
+    margin-bottom:50px;
+  }
+  .secondLanguageintro p{
+    font-size:15px;
+  }
+
+  .secondLanguageImage{
+    padding-top:40px;
+    width:100%;
+    padding-bottom:40px;
+  }
+
+  .secondLanguageImage img{
+    width:100%;
+    object-fit: cover;
+  }
+
+  .secondBox1{
+    width:100vw;
+  }
+  .secondBox2{
+    padding-top:50px;
+    width:100vw;
+    background-color:#eeeeee;
+    padding-bottom:50px;
+  }
+  .secondBox2 h3{
+    text-align:center;
+  }
+  .languageTableBox{
+    background-color: white;
+    border-radius: 5px;
+    padding:5px;
+    margin-top:50px;
+    width:100%;
+    margin-bottom:50px;
+  }
+  .secondBox{
+    padding-top:50px;
+    width:100vw;
+    padding-bottom:50px;
+  }
+    .secondBox h3{
+      text-align:center;
+    }
+
+
+
+
+  .wordContainer1{
+      width:100vw;
+      margin-top:50px;
+      margin-bottom:50px;
+    }
+  .wordBox1{
+    width:80%;
+    margin-left:10%;
+  }
+
+  .wordContainer2{
+      background-color: #eeeeee;
+      width:100vw;
+      padding-top:50px;
+      padding-bottom:50px;
+    }
+  .wordBox2{
+    width:100%;
+  }
+
+  .wordBox2 ul{
+    list-style: none;
+  }
+  .wordBox2 h3{
+    margin-left: 10%;
+  }
+
+  .wordBox2 img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  .listBox{
+    margin-left:10%;
+    line-height: 40px;
+    font-size:20px;
+  }
+  .bold{
+    font-size:20px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+
+  .listText{
+    font-size:15px;
+    line-height: 40px;
+  }
+
+
+  .loveContainer1{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:100vw;
+    h3{
+      text-align: center;
+    }
+  }
+  .loveimage1{
+    margin-bottom:50px;
+    width:100%;
+  }
+  .loveimage2{
+    margin-bottom:50px;
+    width:100%;
+  }
+
+  .loveimage1 img{
+    width:100vw;
+    height:100%;
+    object-fit: cover;
+    .datetitle{
+      margin-left:20%
+    }
+  }
+
+  .loveimage2 img{
+    width:100vw;
+    height:100%;
+    object-fit: cover;
+  }
+
+  .loveContainer2{
+    padding-top:50px;
+    width:100vw;
+    background-color:#eeeeee;
+  }
+
+  .loveBox1{
+
+    padding-top:50px;
+    padding-bottom:50px;
+    width:100vw;
+    .loveBold{
+      font-weight: bold;
+    }
+  }
+
+  .loveBox1 a{
+    text-decoration: none;
+    color:black;
+  }
+  .loveBox1 a:hover{
+    background-color: transparent;
+  }
+  .loveBox2{
+
+    padding-top:50px;
+    padding-bottom:50px;
+    width:100vw;
+    img{
+      width:100vw;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+
+  .dateBox{
+    text-align: center;
+    width:100vw;
+  }
+  .dateBox:nth-child(odd){
+    background-color:#eeeeee;
+  }
+  .campusContainer1{
+      width:100vw;
+      margin-top:50px;
+      margin-bottom:50px;
+  }
+
+  .campusBox{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:100%;
+  }
+
+  .campusRank{
+      width:90%;
+      padding-left:10%;
+  }
+
+  .campusBox:nth-child(odd){
+    background-color:#eeeeee
+  }
+
+
+} /*デバイスの横幅が979px以下の場合*/
+
 
 /*新歓*/
-
-.campusContainer1{
-    width:100vw;
-    margin-top:50px;
-    margin-bottom:50px;
-}
-
-.campusBox{
-  padding-top:50px;
-  padding-bottom:50px;
-  width:100%;
-}
-
-.campusRank{
-    width:60%;
-    padding-left:20%;
-}
-
-.campusBox:nth-child(odd){
-  background-color:#eeeeee
-}
