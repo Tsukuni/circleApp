@@ -248,6 +248,17 @@ body{
   width:80%;
   height:50px;
   float:left;
+  text-align: right;
+
+  a{
+    color:white;
+    text-decoration: none;
+    line-height: 50px;
+    padding-right:10px;
+  }
+  a:hover{
+    background-color: transparent;
+  }
 }
 
 /*menu*/

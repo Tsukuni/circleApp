@@ -5,7 +5,7 @@
       <table class="table">
         <tr>
           <th scope="row">質問1</th>
-          <td><%= school_rank.qestion1 %><span class="button"><%= link_to '削除',school_rank,method: :delete%></span>
+          <td><%= school_rank.qestion1 %>
           <span class="button"><%= link_to '編集',edit_school_rank_path(school_rank)%></td>
         </tr>
         <tr>
@@ -46,5 +46,5 @@
         </tr>
       </table>
     <% end %>
-    <%= link_to '新規作成', new_school_rank_path %>
+  
   </div>

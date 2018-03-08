@@ -44,7 +44,7 @@ class DatePlacesController < ApplicationController
   def update
     respond_to do |format|
       if @date_place.update(date_place_params)
-        format.html { redirect_to loves_path, notice: 'Date place was successfully updated.' }
+        format.html { redirect_to loves_url, notice: 'Date place was successfully updated.' }
         format.json { render :show, status: :ok, location: @date_place }
       else
         format.html { render :edit }

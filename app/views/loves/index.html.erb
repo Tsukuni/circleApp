@@ -30,7 +30,7 @@
     <table class="table">
       <tr>
         <th scope="row">画像</th>
-        <td><%= image_tag obj.image1,class:"resize"%><span class="button"><%= link_to '削除',lofe_path(obj.id),method: :delete%></span>
+        <td><%= image_tag obj.image1,class:"resize"%>
         <span class="button"><%= link_to '編集',edit_lofe_path(obj.id)%></td>
       </tr>
       <tr>
@@ -47,5 +47,4 @@
       </tr>
     </table>
   <%end%>
-  <%= link_to '新規作成',new_lofe_path%>
 </div>

@@ -17,11 +17,10 @@
   <% @exams.each do |obj| %>
     <table class="table">
       <tr>
-        <th scope="row">画像</th>
-        <td><%= image_tag obj.exam_image,class: "resize" %><span class="button"><%= link_to '削除',exam_path(obj.id),method: :delete%></span>
+        <th scope="row">グラフ</th>
+        <td><%= image_tag obj.exam_image,class: "resize" %>
         <span class="button"><%= link_to '編集',edit_exam_path(obj.id)%></td>
       </tr>
     </table>
   <%end%>
-  <%= link_to '新規作成',new_exam_path%>
 </div>

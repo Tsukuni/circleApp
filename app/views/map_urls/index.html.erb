@@ -5,10 +5,9 @@
     <table class="table">
       <tr>
         <th scope="row">場所</th>
-        <td><%= obj.url%><span class="button"><%= link_to '削除',map_url_path(obj.id),method: :delete%></span>
+        <td><%= obj.url%>
         <span class="button"><%= link_to '編集',edit_map_url_path(obj.id)%></td>
       </tr>
     </table>
   <%end%>
-  <%= link_to '新規作成',new_map_url_path%>
 </div>
