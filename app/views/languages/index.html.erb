@@ -5,7 +5,7 @@
       <table class="table">
         <tr>
           <th scope="row">説明　</th>
-          <td><%= obj.context%><span class="button"><%= link_to '削除',language_path(obj.id),method: :delete%></span>
+          <td><%= obj.context%>
           <span class="button"><%= link_to '編集',edit_language_path(obj.id)%></span></td>
         </tr>
         <tr>
@@ -14,7 +14,6 @@
         </tr>
       </table>
       <%end%>
-  <div><%= link_to '新規作成',new_language_url%></div>
 </div>
 <div id="Language" class="col-md-5">
   <h4>第二言語ランキング</h4>

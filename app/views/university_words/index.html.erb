@@ -5,7 +5,7 @@
     <table class="table">
       <tr>
         <th scope="row">1位</th>
-        <td><%= obj.rank1 %><span class="button"><%= link_to '削除',university_word_path(obj.id),method: :delete%></span>
+        <td><%= obj.rank1 %>
         <span class="button"><%= link_to '編集',edit_university_word_path(obj.id)%></td>
       </tr>
       <tr>
@@ -18,7 +18,7 @@
       </tr>
     </table>
   <%end%>
-  <%= link_to '新規作成',new_university_word_path%>
+
 </div>
 <div class="col-md-6 adBox">
   <h4>用語説明</h4>

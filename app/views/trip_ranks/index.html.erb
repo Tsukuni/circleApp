@@ -5,7 +5,7 @@
       <table class="table">
         <tr>
           <th scope="row">質問1</th>
-          <td><%= trip_rank.qestion1 %><span class="button"><%= link_to '削除',trip_rank,method: :delete%></span>
+          <td><%= trip_rank.qestion1 %>
           <span class="button"><%= link_to '編集',edit_trip_rank_path(trip_rank)%></td>
         </tr>
         <tr>
@@ -28,5 +28,5 @@
         </tr>
       </table>
     <% end %>
-    <%= link_to 'New Job Rank', new_trip_rank_path %>
+
   </div>
