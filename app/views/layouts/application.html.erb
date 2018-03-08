@@ -9,7 +9,36 @@
   </head>
 
   <body>
-    <%=image_tag("logo.png",class:"logo")%>
+    <header>
+      <a href="/"><%=image_tag("logo.png",class:"logo")%></a>
+
+    </header>
+
+    <input id="hm_menu" type="checkbox" name="hm_menu" class="hm_menu_check"/>
+    <label for="hm_menu" class="hm_btn"></label>
+      <nav class="hm_menu_wrap">
+        <ul class="hm_list">
+          <li><%= link_to '団体図鑑',university_words_path,:style=>"text-decoration:none" %></li>
+          <%@map_urls = MapUrl.all%>
+          <%@map_urls.each do |f| %>
+          <li><%= link_to 'SCH ~school&schedule~',f.url,:style=>"text-decoration:none" %></li>
+          <%end%>
+          <li><%= link_to 'ComeCale ~welcome calendar~',university_words_path,:style=>"text-decoration:none" %></li>
+          <li><%= link_to 'テルアス',advices_index_path,:style=>"text-decoration:none" %></li>
+          <li><%= link_to 'Unisna', unisna_index_path,:style=>"text-decoration:none" %></li>
+          <li><%= link_to 'DOSHISHA × RANKING', dosihsha_ranks_index_path,:style=>"text-decoration:none" %></li>
+          <li><%= link_to '同志社MAP',maps_index_path,:style=>"text-decoration:none" %></li>
+          <li><%= link_to 'オリ企画',university_words_path,:style=>"text-decoration:none" %></li>
+        </ul>
+      </nav>
     <%= yield %>
   </body>
+  <footer id="footer">
+    <div id="footerBox">
+      <p>今出川キャンパス：〒602-8580　京都市上京区今出川通烏丸東入 </p>
+      <p>京田辺キャンパス：〒610-0394　京田辺市多々羅都谷 1-3 </p>
+      <p>お問い合わせ(オリ実メールアドレス): 2018orite.josen@gmail.com</p>
+      <p>Twitterアカウント:<%=link_to '＠orijitsu_2018','https://twitter.com/search?q=%EF%BC%A0orijitsu_2018&src=typd'%></p>
+    </div>
+  </footer>
 </html>

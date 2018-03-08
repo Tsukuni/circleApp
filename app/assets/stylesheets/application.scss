@@ -19,6 +19,8 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 
+
+
 body{
   padding:0;
   margin:0;
@@ -28,6 +30,171 @@ body{
 /*管理ページ*/
 
 /*header*/
+
+#footer{
+  padding-top:50px;
+  padding-bottom:20px;
+  width:100vw;
+  background-color: #464646;
+  height:200px;
+
+
+}
+
+#footerBox{
+  float:right;
+  width:400px;
+  margin:10px;
+  a:hover{
+    background-color:transparent
+  }
+  p{
+    font-size:11px;
+    color:white;
+  }
+}
+
+.hm_menu_check {/* チェックボックスを隠す */
+  display: none;
+}
+.hm_wrap {
+	display: inline-block;
+	position :fixed;
+	top :0;
+	left :0;
+	width :100%;
+	padding :10px;
+	background :#fff;
+}
+
+.hm_title {/* ハンバーガーメニューオープン時の見出し */
+	position: relative;
+	color: #999;
+	display: inline-block;
+	float: left;
+	font-weight: 100;
+	line-height: 30px;
+	margin: 0 0 0 15px;
+	opacity: 0;
+	-webkit-transform: translate3d(0, -15px, 0);
+	transform: translate3d(0, -15px, 0);
+	-webkit-transition: -webkit-transform 0.6s, opacity 0.5s;
+	transition: transform 0.6s, opacity 0.5s;
+	z-index: 100;
+}
+
+
+/* ▽▽メニューボタン▽▽ */
+.hm_btn {
+	position: fixed;
+  right:20px;
+  top:20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	z-index: 100;
+}
+.hm_btn::before {
+	-webkit-box-shadow: #000 0 12px 0;
+	box-shadow: #000 0 12px 0;
+}
+.hm_btn::after {
+	bottom: 0;
+}
+.hm_btn::before,
+.hm_btn::after {
+	width: 30px;
+	height: 6px;
+	background: #000;
+	display: block;
+	content: '';
+	position: absolute;
+	-webkit-transition: -webkit-box-shadow 0.2s linear, -webkit-transform 0.2s 0.2s;
+	transition: box-shadow 0.2s linear, transform 0.2s 0.2s;
+}
+/* △△メニューボタン△△ */
+
+.hm_menu_wrap {
+	width :100%;
+	height :100vh;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	left: -100%;
+	top: 0;
+	-webkit-transition: left 0.4s;
+	transition: left 0.4s;
+  z-index: 10;
+}
+
+/* ▽▽開閉時のアニメーション▽▽ */
+.hm_menu_check:checked ~ .hm_title {
+	opacity: 1;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+.hm_menu_check:checked ~ .hm_btn::before {
+	-webkit-box-shadow: transparent 0 0 0;
+	box-shadow: transparent 0 0 0;
+	-webkit-transform: rotate(45deg) translate3d(6px, 11px, 0);
+	transform: rotate(45deg) translate3d(6px, 11px, 0);
+}
+.hm_menu_check:checked ~ .hm_btn::after {
+	-webkit-transform: rotate(-45deg) translate3d(6px, -11px, 0);
+	transform: rotate(-45deg) translate3d(6px, -11px, 0);
+}
+.hm_menu_check:checked ~ .hm_menu_wrap {
+	left: 0;
+}
+
+/* △△開閉時のアニメーション△△ */
+
+/* ▽▽メニュー内のリストスタイル▽▽ */
+.hm_list {
+	list-style-type: none;
+	margin: 100px 0 0;
+	padding: 0;
+  text-align: center;
+  z-index:9999;
+}
+.hm_list li a {
+	color: white;
+  line-height: 30px;
+	display: block;
+	overflow: hidden;
+	padding: 8px 22px;
+	position: relative;
+	text-decoration: none;
+	z-index: 1;
+  font-size: 20px;
+}
+.hm_list li a::before {/* aタグマウスオーバー時の背景 */
+
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 100%;
+	left: 0;
+	-webkit-transition: bottom 0.4s;
+	transition: bottom 0.4s;
+	z-index: -1;
+}
+
+.hm_list li a:hover{
+  background-color: transparent
+}
+
+.hm_list li a:hover::before {
+	bottom: 0;
+}
+.hm_list li a:hover::after {
+	opacity: 0.5;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
 
 #adminheader{
   display:table;
@@ -115,7 +282,7 @@ body{
 
 .logo{
   position:fixed;
-  z-index:3;
+  z-index:9999;
   margin-left:20px;
   height:70px;
 }
@@ -163,6 +330,7 @@ body{
 }
 
 .advicebox{
+  padding-top:100px;
   width:100%;
   position: absolute;
   text-align: center;
@@ -213,12 +381,13 @@ body{
 
 /*Map Imade*/
 .maptitle {
-  background-image: image-url("map.jpg");
+  background-image: image-url("map.JPG");
   height:100vh;
   width:100vw;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
 }
 .maptitle::before{
 	/* 透過した黒を重ねる */
@@ -230,6 +399,7 @@ body{
 	bottom: 0;
 	left: 0;
 	content: ' ';
+
 }
 
 .mapbox{
@@ -242,6 +412,7 @@ body{
   text-align: center;
   text-decoration: none;
   padding:10px;
+
 }
 .mapTitle a{
   text-decoration: none;
