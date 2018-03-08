@@ -21,21 +21,23 @@
 }
 
 .box{
-  padding-top:60px;
+  padding-top:100px;
   width:100%;
   position: absolute;
   text-align: center;
 }
 
 .toptitle{
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
   padding:10px;
 }
 .toptitle a{
   text-decoration: none;
+  font-size:24px;
   color:#001E4C;
-  font-size:30px;
+
 }
 .toptitle a:hover{
   background-color:transparent;

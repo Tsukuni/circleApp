@@ -5,13 +5,14 @@
   width:100vw;
   height:500px;
   text-align:center;
+  position:relative;
 
 }
 
 .adviceHeader h2{
   position:absolute;
-  top:30%;
-  left:45%;
+  width:100%;
+  bottom:200px;
 }
 
 .adviceHeader img{
