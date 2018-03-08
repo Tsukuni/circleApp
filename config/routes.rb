@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'ori_event_page/index'
+  get 'ori_event_page/:id', to: 'ori_event_page#show'
+
+
+  resources :ori_pages
   get 'unisna/index'
 
   resources :map_urls

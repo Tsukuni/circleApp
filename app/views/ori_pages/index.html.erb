@@ -1,0 +1,17 @@
+<h3>オリ企画</h3>
+<div class="col-md-7 adBox">
+  <% @ori_pages.each do |ori_page| %>
+    <table class="table">
+      <tr>
+        <th scope="row">１枚目</th>
+        <td><%= image_tag ori_page.ori_photo1,class:"resize"%><span class="button"><%= link_to '削除',ori_page,method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_ori_page_path(ori_page)%></td>
+      </tr>
+      <tr>
+        <th scope="row">２枚目</th>
+        <td><%= image_tag ori_page.ori_photo2,class:"resize"%></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_ori_page_path%>
+</div>

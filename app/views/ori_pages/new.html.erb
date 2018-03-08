@@ -1,0 +1,20 @@
+<div class="col-md-12">
+  <h3>Men</h3>
+</div>
+<div>
+  <%=form_for @ori_page do |f| %>
+  <div class="col-md-7 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">１枚目</th>
+        <td><%= f.file_field :ori_photo1 %></td>
+      </tr>
+      <tr>
+        <th scope="row">２枚目</th>
+        <td><%= f.file_field :ori_photo2 %></td>
+      </tr>
+    </table>
+    <%= f.submit "送信" ,class: "btn button" %>
+  </div>
+  <% end %>
+</div>

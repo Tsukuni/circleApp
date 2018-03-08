@@ -1,0 +1,27 @@
+<%= form_with(model: ori_page, local: true) do |form| %>
+  <% if ori_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ori_page.errors.count, "error") %> prohibited this ori_page from being saved:</h2>
+
+      <ul>
+      <% ori_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ori_photo1 %>
+    <%= form.text_field :ori_photo1, id: :ori_page_ori_photo1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ori_photo2 %>
+    <%= form.text_field :ori_photo2, id: :ori_page_ori_photo2 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
