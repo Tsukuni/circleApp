@@ -37,7 +37,16 @@
       </nav>
     <%= yield %>
   </body>
+
   <footer id="footer">
+    <%@advertisement = Advertisement.all%>
+    <div id="advertisementBox">
+      <%@advertisement.each do |f| %>
+        <div class="advertisementImage">
+          <%=link_to image_tag(f.adver_image,:class => "adverImage"),"#{f.url}" %>
+        </div>
+      <%end%>
+    </div>
     <div id="footerBox">
       <p>今出川キャンパス：〒602-8580　京都市上京区今出川通烏丸東入 </p>
       <p>京田辺キャンパス：〒610-0394　京田辺市多々羅都谷 1-3 </p>
