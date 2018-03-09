@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :advertisements
   get 'ori_event_page/index'
   get 'ori_event_page/:id', to: 'ori_event_page#show'
 

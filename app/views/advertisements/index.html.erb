@@ -1,0 +1,17 @@
+<h3>広告</h3>
+<div class="col-md-5 adBox">
+  <% @advertisements.each do |obj| %>
+    <table class="table">
+      <tr>
+        <th scope="row">広告URL</th>
+        <td><%= obj.url %><span class="button"><%= link_to '削除',advertisement_path(obj.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_advertisement_path(obj.id)%></td>
+      </tr>
+      <tr>
+        <th scope="row">広告画像</th>
+        <td><%=image_tag(obj.adver_image,class:"advertisement")%></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成', new_advertisement_path %>
+</div>
