@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 gem 'jquery-rails'
 gem 'carrierwave'
-gem 'rmagick'
 gem 'bootstrap-sass'
 gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
