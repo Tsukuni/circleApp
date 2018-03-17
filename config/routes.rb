@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :ori_pages
   get 'unisna/index'
+  get 'unisna/men/:id', to: 'unisna#men'
+  get 'unisna/women/:id', to: 'unisna#women'
 
   resources :map_urls
   get 'dosihsha_ranks/index'
