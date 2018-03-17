@@ -1,16 +1,33 @@
 // Place all the styles related to the DosihshaRanks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.doshishaRanks{
-  width:100vw;
-}
-.doshishaRanksBox{
-  padding-top:50px;
-  padding-bottom:50px;
-  width:60%;
-  padding-left: 20%;
-}
+@media only screen and (max-width: 800px) {
+  .doshishaRanks{
+    width:100vw;
+  }
+  .doshishaRanksBox{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:80%;
+    margin-left: 10%;
+  }
 
-.doshishaRanks:nth-child(odd){
-  background-color: #eeeeee;
+  .doshishaRanks:nth-child(odd){
+    background-color: #eeeeee;
+  }
+}
+@media only screen and (min-width: 801px) {
+  .doshishaRanks{
+    width:100vw;
+  }
+  .doshishaRanksBox{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:60%;
+    margin-left: 20%;
+  }
+
+  .doshishaRanks:nth-child(odd){
+    background-color: #eeeeee;
+  }
 }
