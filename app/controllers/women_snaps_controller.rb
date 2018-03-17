@@ -71,7 +71,7 @@ class WomenSnapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def women_snap_params
-      params.require(:women_snap).permit(:women_image, :name,:gakubu,:grade,:circle,:content)
+      params.require(:women_snap).permit(:women_image,:women_image2,:women_image3, :name,:gakubu,:grade,:circle,:content)
     end
     def login_check
       if session[:user_id].nil?

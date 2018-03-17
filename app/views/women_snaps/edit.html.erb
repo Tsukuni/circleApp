@@ -1,13 +1,21 @@
 <div class="col-md-12">
-  <h3>Woen</h3>
+  <h3>Women</h3>
 </div>
 <div>
   <%=form_for @women_snap do |f| %>
   <div class="col-md-6 adBox">
     <table class="table">
       <tr>
-        <th scope="row">画像</th>
+        <th scope="row">画像1</th>
         <td><%= f.file_field :women_image %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像2</th>
+        <td><%= f.file_field :women_image2 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像3</th>
+        <td><%= f.file_field :women_image3 %></td>
       </tr>
       <tr>
         <th scope="row">名前</th>
