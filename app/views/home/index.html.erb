@@ -1,10 +1,10 @@
 <div class="topImage">
   <div class="box">
-    <div class="toptitle"><%= link_to '団体図鑑',university_words_path,:style=>"text-decoration:none" %></div>
+    <li><%= link_to '団体図鑑','http://www.freful-orijitsu.site:8080/',:style=>"text-decoration:none" %></li>
     <%@map_urls.each do |f| %>
       <div class="toptitle"><%= link_to 'SCH ~school&schedule~',f.url,:style=>"text-decoration:none" %></div>
     <%end%>
-    <div class="toptitle"><%= link_to 'ComeCale ~welcome calendar~',university_words_path,:style=>"text-decoration:none" %></div>
+    <li><%= link_to 'ComeCale ~welcome calendar~','http://www.freful-orijitsu.site:8080/',:style=>"text-decoration:none" %></li>
     <div class="toptitle"><%= link_to 'テルアス',advices_index_path,:style=>"text-decoration:none"; %></div>
     <div class="toptitle"><%= link_to 'Unisna', unisna_index_path,:style=>"text-decoration:none" %></div>
     <div class="toptitle"><%= link_to 'DOSHISHA × RANKING', dosihsha_ranks_index_path,:style=>"text-decoration:none" %></div>

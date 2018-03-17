@@ -22,12 +22,12 @@
     <label for="hm_menu" class="hm_btn"></label>
       <nav class="hm_menu_wrap">
         <ul class="hm_list">
-          <li><%= link_to '団体図鑑',university_words_path,:style=>"text-decoration:none" %></li>
+          <li><%= link_to '団体図鑑','http://www.freful-orijitsu.site:8080/',:style=>"text-decoration:none" %></li>
           <%@map_urls = MapUrl.all%>
           <%@map_urls.each do |f| %>
           <li><%= link_to 'SCH ~school&schedule~',f.url,:style=>"text-decoration:none" %></li>
           <%end%>
-          <li><%= link_to 'ComeCale ~welcome calendar~',university_words_path,:style=>"text-decoration:none" %></li>
+          <li><%= link_to 'ComeCale ~welcome calendar~','http://www.freful-orijitsu.site:8080/',:style=>"text-decoration:none" %></li>
           <li><%= link_to 'テルアス',advices_index_path,:style=>"text-decoration:none" %></li>
           <li><%= link_to 'Unisna', unisna_index_path,:style=>"text-decoration:none" %></li>
           <li><%= link_to 'DOSHISHA × RANKING', dosihsha_ranks_index_path,:style=>"text-decoration:none" %></li>
