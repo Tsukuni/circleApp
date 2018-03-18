@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rank1: MyString
+  rank2: MyString
+  rank3: MyString
+  abordrank1: MyString
+  abordrank2: MyString
+  abordrank3: MyString
+
+two:
+  rank1: MyString
+  rank2: MyString
+  rank3: MyString
+  abordrank1: MyString
+  abordrank2: MyString
+  abordrank3: MyString

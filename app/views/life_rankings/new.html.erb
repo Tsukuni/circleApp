@@ -1,0 +1,36 @@
+<div class="col-md-12">
+  <h3>新規作成</h3>
+</div>
+<div>
+  <%=form_for @life_ranking do |f| %>
+  <div class="col-md-6 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">国内1位</th>
+        <td><%= f.text_field :rank1 %></td>
+      </tr>
+      <tr>
+        <th scope="row">2位</th>
+        <td><%= f.text_field :rank2 %></td>
+      </tr>
+      <tr>
+        <th scope="row">3位</th>
+        <td><%= f.text_field :rank3%></td>
+      </tr>
+      <tr>
+        <th scope="row">国外1位</th>
+        <td><%= f.text_field :abordrank1 %></td>
+      </tr>
+      <tr>
+        <th scope="row">2位</th>
+        <td><%= f.text_field :abordrank2%></td>
+      </tr>
+      <tr>
+        <th scope="row">3位</th>
+        <td><%= f.text_field :abordrank3%></td>
+      </tr>
+    </table>
+    <%= f.submit "送信" ,class: "btn" %>
+  </div>
+  <% end %>
+</div>

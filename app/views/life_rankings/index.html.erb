@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Life Rankings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rank1</th>
+      <th>Rank2</th>
+      <th>Rank3</th>
+      <th>Abordrank1</th>
+      <th>Abordrank2</th>
+      <th>Abordrank3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @life_rankings.each do |life_ranking| %>
+      <tr>
+        <td><%= life_ranking.rank1 %></td>
+        <td><%= life_ranking.rank2 %></td>
+        <td><%= life_ranking.rank3 %></td>
+        <td><%= life_ranking.abordrank1 %></td>
+        <td><%= life_ranking.abordrank2 %></td>
+        <td><%= life_ranking.abordrank3 %></td>
+        <td><%= link_to 'Show', life_ranking %></td>
+        <td><%= link_to 'Edit', edit_life_ranking_path(life_ranking) %></td>
+        <td><%= link_to 'Destroy', life_ranking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Life Ranking', new_life_ranking_path %>

@@ -1,0 +1,30 @@
+
+<div class="col-md-5 adBox">
+    <h4>友達の作り方</h4>
+    <% @friends.each do |friend| %>
+      <table class="table">
+        <tr>
+          <th scope="row">ポイント</th>
+          <td><%= friend.context %><span class="button"><%= link_to '削除',friend_path(friend.id),method: :delete%></span>
+          <span class="button"><%= link_to '編集',edit_friend_path(friend.id)%></td>
+        </tr>
+        <tr>
+          <th scope="row">画像1</th>
+          <td><%= image_tag friend.friend_photo1,class: "resize" %></td>
+        </tr>
+        <tr>
+          <th scope="row">画像2</th>
+          <td><%= image_tag friend.friend_photo2,class: "resize" %></td>
+        </tr>
+        <tr>
+          <th scope="row">画像3</th>
+          <td><%= image_tag friend.friend_photo3,class: "resize" %></td>
+        </tr>
+        <tr>
+          <th scope="row">画像4</th>
+          <td><%= image_tag friend.friend_photo4,class: "resize" %></td>
+        </tr>
+      </table>
+    <% end %>
+    <%= link_to '新規作成', new_friend_path %>
+  </div>

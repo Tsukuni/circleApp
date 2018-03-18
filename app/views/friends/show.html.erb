@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Friend photo1:</strong>
+  <%= @friend.friend_photo1 %>
+</p>
+
+<p>
+  <strong>Friend photo2:</strong>
+  <%= @friend.friend_photo2 %>
+</p>
+
+<p>
+  <strong>Friend photo3:</strong>
+  <%= @friend.friend_photo3 %>
+</p>
+
+<p>
+  <strong>Friend photo4:</strong>
+  <%= @friend.friend_photo4 %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @friend.context %>
+</p>
+
+<%= link_to 'Edit', edit_friend_path(@friend) %> |
+<%= link_to 'Back', friends_path %>

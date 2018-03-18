@@ -1,0 +1,52 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>プライベート</h2>
+</div>
+<div class="lifeContainer">
+  <div class="lifeBox">
+    <%@life_pages.each do |obj| %>
+      <%=image_tag(obj.life_photo1)%>
+    <%end%>
+  </div>
+</div>
+<div class="lifeContainer">
+  <div class="lifeBox1">
+    <%@life_pages.each do |obj| %>
+      <%=image_tag(obj.life_photo2)%>
+    <%end%>
+  </div>
+  <div class="lifeBox2">
+    <%@life_pages.each do |obj| %>
+      <%=image_tag(obj.life_photo3)%>
+    <%end%>
+  </div>
+</div>
+<div class="lifeContainer">
+  <div class="lifeBox">
+    <%@life_pages.each do |obj| %>
+      <%=image_tag(obj.life_photo4)%>
+    <%end%>
+  </div>
+</div>
+<div class="lifeContainer1">
+  <h3>おすすめ旅行先</h3>
+  <br/>
+  <div class="lifeBox3">
+    <div class="lifeBox1">
+      <h4>国内編</h4>
+      <%@life_rankings.each do |obj| %>
+        <h4>1位　<%=obj.rank1%></h4>
+        <h4>2位　<%=obj.rank2%></h4>
+        <h4>3位　<%=obj.rank3%></h4>
+      <%end%>
+    </div>
+    <div class="lifeBox2">
+      <h4>国外編</h4>
+      <%@life_rankings.each do |obj| %>
+        <h4>1位　<%=obj.abordrank1%></h4>
+        <h4>2位　<%=obj.abordrank2%></h4>
+        <h4>3位　<%=obj.abordrank3%></h4>
+      <%end%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="adviceHeader">
+  <%=image_tag('life.jpg')%>
+  <h2>友達の作り方</h2>
+</div>
+<div class="lifeContainer">
+  <div class="lifeBox1">
+    <%@friends.each do |obj| %>
+      <%=image_tag(obj.friend_photo1)%>
+    <%end%>
+  </div>
+  <div class="lifeBox2">
+    <%@friends.each do |obj| %>
+      <%=image_tag(obj.friend_photo2)%>
+    <%end%>
+  </div>
+</div>
+<div class="lifeContainer">
+  <div class="lifeBox1">
+    <%@friends.each do |obj| %>
+      <%=image_tag(obj.friend_photo3)%>
+    <%end%>
+  </div>
+  <div class="lifeBox2">
+    <%@friends.each do |obj| %>
+      <%=image_tag(obj.friend_photo4)%>
+    <%end%>
+  </div>
+</div>
+<div class="lifeContainer2">
+  <h3>友達がたくさんできる方法とは？</h3>
+  <div class="lifeBox3">
+    <div class="lifeBox1">
+      <%@friends.each do |obj| %>
+        <%=simple_format(obj.context)%>
+      <%end%>
+    </div>
+  </div>
+</div>

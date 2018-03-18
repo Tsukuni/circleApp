@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :friends
+  resources :life_rankings
+  resources :life_pages
   resources :advertisements
   get 'ori_event_page/index'
   get 'ori_event_page/:id', to: 'ori_event_page#show'
@@ -25,6 +28,8 @@ Rails.application.routes.draw do
   get 'advices/exams'
   get 'advices/welcome'
   get 'advices/loves'
+  get 'advices/life'
+  get 'advices/friend'
 
   resources :women_snaps
   resources :men_snaps

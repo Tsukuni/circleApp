@@ -1,0 +1,2 @@
+class LifeRanking < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<div class="col-md-12">
+  <h3>友達の作り方</h3>
+</div>
+<div>
+  <%=form_for @friend do |f| %>
+    <div class="col-md-6 adBox">
+      <table class="table">
+        <tr>
+          <th scope="row">一言</th>
+          <td><%= f.text_area :context, class: "form-control"%></td>
+        </tr>
+        <tr>
+          <th scope="row">画像1</th>
+          <td><%= f.file_field :friend_photo1%></td>
+        </tr>
+        <tr>
+          <th scope="row">画像2</th>
+          <td><%= f.file_field :friend_photo2%></td>
+        </tr>
+        <tr>
+          <th scope="row">画像3</th>
+          <td><%= f.file_field :friend_photo3 %></td>
+        </tr>
+        <tr>
+          <th scope="row">画像4</th>
+          <td><%= f.file_field :friend_photo4 %></td>
+        </tr>
+      </table>
+      <%= f.submit "送信" ,class: "btn" %>
+    </div>
+  <% end %>
+</div>
