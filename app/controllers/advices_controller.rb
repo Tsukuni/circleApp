@@ -25,4 +25,11 @@ class AdvicesController < ApplicationController
     @loves = Love.all
     @date_places = DatePlace.all
   end
+  def life
+    @life_pages = LifePage.all
+    @life_rankings = LifeRanking.all
+  end
+  def friend
+    @friends = Friend.all
+  end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317131941) do
+ActiveRecord::Schema.define(version: 20180318102627) do
 
   create_table "advertisements", force: :cascade do |t|
     t.string "adver_image"
@@ -108,6 +108,16 @@ ActiveRecord::Schema.define(version: 20180317131941) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "friends", force: :cascade do |t|
+    t.string "friend_photo1"
+    t.string "friend_photo2"
+    t.string "friend_photo3"
+    t.string "friend_photo4"
+    t.text "context"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "introduce_university_words", force: :cascade do |t|
     t.string "title"
     t.text "meaning"
@@ -133,6 +143,26 @@ ActiveRecord::Schema.define(version: 20180317131941) do
   create_table "languages", force: :cascade do |t|
     t.text "context"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "life_pages", force: :cascade do |t|
+    t.string "life_photo1"
+    t.string "life_photo2"
+    t.string "life_photo3"
+    t.string "life_photo4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "life_rankings", force: :cascade do |t|
+    t.string "rank1"
+    t.string "rank2"
+    t.string "rank3"
+    t.string "abordrank1"
+    t.string "abordrank2"
+    t.string "abordrank3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

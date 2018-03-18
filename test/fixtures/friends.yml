@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  friend_photo1: MyString
+  friend_photo2: MyString
+  friend_photo3: MyString
+  friend_photo4: MyString
+  context: MyText
+
+two:
+  friend_photo1: MyString
+  friend_photo2: MyString
+  friend_photo3: MyString
+  friend_photo4: MyString
+  context: MyText

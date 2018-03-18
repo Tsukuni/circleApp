@@ -29,6 +29,78 @@
 
 /*恋愛*/
 @media only screen and (min-width:801px){
+
+  .lifeContainer{
+    display:flex;
+    width:100vw;
+    .lifeBox{
+      margin-left:10%;
+      width:80%;
+    }
+    .lifeBox1{
+      margin-left:10%;
+      width:40%;
+    }
+    .lifeBox2{
+      width:40%;
+    }
+    .lifeBox3{
+      width:100%;
+      display:flex;
+      h4{
+        text-align: center;
+      }
+    }
+    img{
+      width:100%;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+  }
+  .lifeContainer:nth-child(odd){
+    background-color:#eeeeee;
+  }
+  .lifeContainer1{
+    padding-top:30px;
+    background-color:#eeeeee;
+    h3{
+      text-align: center;
+    }
+    width:100vw;
+    .lifeBox{
+      margin-left:10%;
+      width:80%;
+    }
+
+    .lifeBox3{
+      padding-bottom:30px;
+      width:100%;
+      display:flex;
+      .lifeBox1{
+        margin-left:10%;
+        width:40%;
+      }
+      .lifeBox2{
+        width:40%;
+      }
+    }
+  }
+  .lifeContainer2{
+    h3{
+      text-align: center;
+    }
+    padding-top:30px;
+    width:100%;
+    padding-bottom:30px;
+    .lifeBox3{
+      padding-left:10%;
+    }
+    p{
+      font-size:20px;
+      line-height:30px;
+    }
+  }
+
   .secondLanguageintro{
     margin-top:50px;
     margin-left:20%;
@@ -228,6 +300,45 @@
 
 }
 @media only screen and (max-width: 800px) {
+  .lifeContainer{
+    width:100vw;
+    img{
+      width:100%;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+  }
+  .lifeContainer:nth-child(odd){
+    background-color:#eeeeee;
+  }
+  .lifeContainer1{
+    padding-top:30px;
+    background-color:#eeeeee;
+    h3{
+      text-align: center;
+    }
+    width:100vw;
+    .lifeBox3{
+      padding-left:10%;
+    }
+    padding-bottom:30px;
+  }
+  .lifeContainer2{
+    h3{
+      text-align: center;
+    }
+    padding-top:30px;
+    width:100%;
+    padding-bottom:30px;
+    .lifeBox3{
+      padding-left:10%;
+    }
+    p{
+      font-size:20px;
+      line-height:30px;
+    }
+  }
+
   .secondLanguageintro{
     margin-top:50px;
     margin-left:10%;

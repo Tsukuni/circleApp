@@ -1,0 +1,28 @@
+<div class="col-md-12">
+  <h3>編集</h3>
+</div>
+<div>
+  <%=form_for @life_page do |f| %>
+  <div class="col-md-6 adBox">
+    <table class="table">
+      <tr>
+        <th scope="row">画像1</th>
+        <td><%= f.file_field :life_photo1 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像2</th>
+        <td><%= f.file_field :life_photo2 %></td>
+      </tr>
+      <tr>
+        <th scope="row">画像3</th>
+        <td><%= f.file_field :life_photo3%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像4</th>
+        <td><%= f.file_field :life_photo4 %></td>
+      </tr>
+    </table>
+    <%= f.submit "送信" ,class: "btn" %>
+  </div>
+  <% end %>
+</div>

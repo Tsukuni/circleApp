@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  life_photo1: MyString
+  life_photo2: MyString
+  life_photo3: MyString
+  life_photo4: MyString
+
+two:
+  life_photo1: MyString
+  life_photo2: MyString
+  life_photo3: MyString
+  life_photo4: MyString
