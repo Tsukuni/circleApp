@@ -1,10 +1,9 @@
 <div class="adviceHeader">
-  <%=image_tag('life.jpg')%>
-  <h2>Doshisha × Ranking</h2>
+  <%=image_tag('circle.jpg')%>
+  <h2>サークル・クラブ</h2>
 </div>
 <div class="doshishaRanks">
   <div class="doshishaRanksBox">
-      <h3>サークル・クラブ</h3>
       <br/>
       <%@circle_ranks.each do |obj| %>
         <h4>質問　<%=obj.qestion1%></h4>
@@ -29,9 +28,12 @@
       <% end %>
   </div>
 </div>
+<div class="adviceHeader">
+  <%=image_tag('job.jpg')%>
+  <h2>バイト</h2>
+</div>
 <div class="doshishaRanks">
   <div class="doshishaRanksBox">
-      <h3>バイト</h3>
       <br/>
       <%@job_ranks.each do |obj| %>
         <h4>質問　<%=obj.qestion1%></h4>
@@ -51,9 +53,12 @@
       <% end %>
   </div>
 </div>
+<div class="adviceHeader">
+  <%=image_tag('shool.jpg')%>
+  <h2>学校</h2>
+</div>
 <div class="doshishaRanks">
   <div class="doshishaRanksBox">
-      <h3>学校</h3>
       <br/>
       <%@school_ranks.each do |obj| %>
         <h4>質問　<%=obj.qestion1%></h4>
@@ -73,9 +78,12 @@
       <% end %>
   </div>
 </div>
+<div class="adviceHeader">
+  <%=image_tag('fashion.jpg')%>
+  <h2>ファッション</h2>
+</div>
 <div class="doshishaRanks">
   <div class="doshishaRanksBox">
-      <h3>ファッション</h3>
       <br/>
       <%@fashion_ranks.each do |obj| %>
         <h4>質問　<%=obj.qestion1%></h4>
@@ -99,9 +107,12 @@
       <% end %>
   </div>
 </div>
+<div class="adviceHeader">
+  <%=image_tag('trip.jpg')%>
+  <h2>旅行</h2>
+</div>
 <div class="doshishaRanks">
   <div class="doshishaRanksBox">
-      <h3>旅行</h3>
       <br/>
       <%@trip_ranks.each do |obj| %>
         <h4>質問　<%=obj.qestion1%></h4>

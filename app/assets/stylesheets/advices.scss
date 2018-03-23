@@ -1,35 +1,25 @@
 // Place all the styles related to the advices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.adviceHeader{
-  width:100vw;
-  height:500px;
-  text-align:center;
-  position:relative;
 
-}
-
-.adviceHeader h2{
-  position:absolute;
-  width:100%;
-  bottom:200px;
-}
-
-.adviceHeader img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-
-}
-
-/*第二言語*/
-
-  /*大学生の用語*/
-
-
-/*恋愛*/
 @media only screen and (min-width:801px){
 
+  .adviceHeader{
+    width:100vw;
+    height:500px;
+    text-align:center;
+    position:relative;
+  }
+  .adviceHeader h2{
+    position:absolute;
+    width:100%;
+    bottom:200px;
+  }
+  .adviceHeader img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
   .lifeContainer{
     display:flex;
     width:100vw;
@@ -300,6 +290,22 @@
 
 }
 @media only screen and (max-width: 800px) {
+  .adviceHeader{
+    width:100vw;
+    height:300px;
+    text-align:center;
+    position:relative;
+  }
+  .adviceHeader h2{
+    position:absolute;
+    width:100%;
+    bottom:150px;
+  }
+  .adviceHeader img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
   .lifeContainer{
     width:100vw;
     img{
