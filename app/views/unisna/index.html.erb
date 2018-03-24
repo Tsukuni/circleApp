@@ -7,14 +7,6 @@
     <%@men_snaps.each do |f| %>
       <div class="menBottom">
        <div><%=link_to image_tag(f.men_image),"/unisna/men/#{f.id}" %></div>
-        <div class="unisnaBox">
-          <h3><%=f.name%></h3>
-          <p><%=f.grade%>回生 <%=f.gakubu%>学部<p>
-            <h5>所属サークル</h5>
-          <p><%=f.circle%></p>
-          <h5>ファッションポイント</h5>
-          <p><%=simple_format(f.content)%></p>
-        </div>
       </div>
     <%end%>
   </div>
@@ -22,14 +14,7 @@
     <h2>WOMEN</h2>
     <%@women_snaps.each do |f| %>
         <div class="womenBottom">
-       <div><%=link_to image_tag(f.women_image),"/unisna/women/#{f.id}" %></div>
-        <div class="unisnaBox">
-          <h3><%=f.name%></h3>
-          <p><%=f.grade%>回生 <%=f.gakubu%>学部<p>
-          <h5>所属サークル</h5>
-          <p><%=f.circle%></p>
-          <h5>ファッションポイント</h5>
-          <p><%=simple_format(f.content)%></p>
+         <div><%=link_to image_tag(f.women_image),"/unisna/women/#{f.id}" %></div>
         </div>
       </div>
     <%end%>
