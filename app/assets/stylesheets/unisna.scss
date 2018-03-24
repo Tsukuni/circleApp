@@ -20,7 +20,6 @@
       margin-top:50px;
       margin-bottom:50px;
       border-radius: 5px;
-      background-color: #EEF9FF;
     }
     .mensBox img{
       width:100%;
@@ -33,8 +32,6 @@
     .womenBottom{
       margin-top:50px;
       border-radius: 5px;
-
-      background-color: #F2D8DF;
       margin-bottom:50px;
     }
     .womensBox img{
@@ -49,6 +46,9 @@
     .uniBox img{
       width:100%
     }
+  }
+  .detail{
+    margin-left:10%
   }
 
 }
@@ -69,22 +69,21 @@
       margin-top:50px;
       margin-bottom:50px;
       border-radius: 5px;
-      background-color: #EEF9FF;
-    }
-    .mensBox img{
 
+    }
+
+    .mensBox img{
       width:100%;
     }
+
     .womensBox{
       width:40%;
-
       padding:50px;
     }
+
     .womenBottom{
       margin-top:50px;
       border-radius: 5px;
-
-      background-color: #F2D8DF;
       margin-bottom:50px;
     }
     .womensBox img{
@@ -102,6 +101,8 @@
       width:100%
     }
   }
-
-
+  .detail{
+    margin-left:20%;
+    width:60%;
+  }
 }
