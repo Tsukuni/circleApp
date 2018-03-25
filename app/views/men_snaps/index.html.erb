@@ -4,9 +4,17 @@
   <% @men_snaps.each do |men_snap| %>
     <table class="table">
       <tr>
-        <th scope="row">画像</th>
+        <th scope="row">画像1</th>
         <td><%= image_tag men_snap.men_image,class:"resize"%><span class="button"><%= link_to '削除',men_snap,method: :delete%></span>
         <span class="button"><%= link_to '編集',edit_men_snap_path(men_snap)%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像2</th>
+        <td><%= image_tag men_snap.men_image2,class:"resize"%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像3</th>
+        <td><%= image_tag men_snap.men_image3,class:"resize"%></td>
       </tr>
       <tr>
         <th scope="row">名前</th>

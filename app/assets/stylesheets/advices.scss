@@ -1,34 +1,95 @@
 // Place all the styles related to the advices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.adviceHeader{
-  width:100vw;
-  height:500px;
-  text-align:center;
-  position:relative;
 
-}
-
-.adviceHeader h2{
-  position:absolute;
-  width:100%;
-  bottom:200px;
-}
-
-.adviceHeader img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-
-}
-
-/*第二言語*/
-
-  /*大学生の用語*/
-
-
-/*恋愛*/
 @media only screen and (min-width:801px){
+  .adviceHeader{
+    width:100vw;
+    height:500px;
+    text-align:center;
+    position:relative;
+  }
+  .adviceHeader h2{
+    position:absolute;
+    width:100%;
+    bottom:200px;
+  }
+  .adviceHeader img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  .lifeContainer{
+    display:flex;
+    width:100vw;
+    .lifeBox{
+      margin-left:10%;
+      width:80%;
+    }
+    .lifeBox1{
+      margin-left:10%;
+      width:40%;
+    }
+    .lifeBox2{
+      width:40%;
+    }
+    .lifeBox3{
+      width:100%;
+      display:flex;
+      h4{
+        text-align: center;
+      }
+    }
+    img{
+      width:100%;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+  }
+  .lifeContainer:nth-child(odd){
+    background-color:#eeeeee;
+  }
+  .lifeContainer1{
+    padding-top:30px;
+    background-color:#eeeeee;
+    h3{
+      text-align: center;
+    }
+    width:100vw;
+    .lifeBox{
+      margin-left:10%;
+      width:80%;
+    }
+
+    .lifeBox3{
+      padding-bottom:30px;
+      width:100%;
+      display:flex;
+      .lifeBox1{
+        margin-left:10%;
+        width:40%;
+      }
+      .lifeBox2{
+        width:40%;
+      }
+    }
+  }
+  .lifeContainer2{
+    h3{
+      text-align: center;
+    }
+    padding-top:30px;
+    width:100%;
+    padding-bottom:30px;
+    .lifeBox3{
+      padding-left:10%;
+    }
+    p{
+      font-size:20px;
+      line-height:30px;
+    }
+  }
+
   .secondLanguageintro{
     margin-top:50px;
     margin-left:20%;
@@ -48,8 +109,6 @@
 
   .secondLanguageImage img{
     width:100%;
-    height:350px;
-    object-fit: cover;
   }
 
   .secondBox1{
@@ -230,6 +289,61 @@
 
 }
 @media only screen and (max-width: 800px) {
+  .adviceHeader{
+    width:100vw;
+    height:300px;
+    text-align:center;
+    position:relative;
+  }
+  .adviceHeader h2{
+    position:absolute;
+    width:100%;
+    bottom:150px;
+  }
+  .adviceHeader img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  .lifeContainer{
+    width:100vw;
+    img{
+      width:100%;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+  }
+  .lifeContainer:nth-child(odd){
+    background-color:#eeeeee;
+  }
+  .lifeContainer1{
+    padding-top:30px;
+    background-color:#eeeeee;
+    h3{
+      text-align: center;
+    }
+    width:100vw;
+    .lifeBox3{
+      padding-left:10%;
+    }
+    padding-bottom:30px;
+  }
+  .lifeContainer2{
+    h3{
+      text-align: center;
+    }
+    padding-top:30px;
+    width:100%;
+    padding-bottom:30px;
+    .lifeBox3{
+      padding-left:10%;
+    }
+    p{
+      font-size:20px;
+      line-height:30px;
+    }
+  }
+
   .secondLanguageintro{
     margin-top:50px;
     margin-left:10%;
@@ -247,8 +361,7 @@
   }
 
   .secondLanguageImage img{
-    width:100%;
-    object-fit: cover;
+    width:100%
   }
 
   .secondBox1{

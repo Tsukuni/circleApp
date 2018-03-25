@@ -1,0 +1,49 @@
+<div class="adviceHeader">
+  <%=image_tag('unisna.jpg')%>
+</div>
+<div class="unisnaContainer">
+  <div class="uniBox">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <%=image_tag(@men_snap.men_image)%>
+        </div>
+
+        <div class="item">
+          <%=image_tag(@men_snap.men_image2)%>
+        </div>
+
+        <div class="item">
+          <%=image_tag(@men_snap.men_image3)%>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="detail">
+  <h3><%=@men_snap.name%></h3>
+  <p><%=@men_snap.grade%>回生 <%=@men_snap.gakubu%>学部<p>
+    <h5>所属サークル</h5>
+  <p><%=@men_snap.circle%></p>
+  <h5>ファッションポイント</h5>
+  <p><%=simple_format(@men_snap.content)%></p>
+</div>
+<br/>

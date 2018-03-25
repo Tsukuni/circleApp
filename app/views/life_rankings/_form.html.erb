@@ -1,0 +1,47 @@
+<%= form_with(model: life_ranking, local: true) do |form| %>
+  <% if life_ranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(life_ranking.errors.count, "error") %> prohibited this life_ranking from being saved:</h2>
+
+      <ul>
+      <% life_ranking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rank1 %>
+    <%= form.text_field :rank1, id: :life_ranking_rank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank2 %>
+    <%= form.text_field :rank2, id: :life_ranking_rank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank3 %>
+    <%= form.text_field :rank3, id: :life_ranking_rank3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abordrank1 %>
+    <%= form.text_field :abordrank1, id: :life_ranking_abordrank1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abordrank2 %>
+    <%= form.text_field :abordrank2, id: :life_ranking_abordrank2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abordrank3 %>
+    <%= form.text_field :abordrank3, id: :life_ranking_abordrank3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

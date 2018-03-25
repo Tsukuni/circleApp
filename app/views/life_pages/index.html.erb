@@ -1,0 +1,59 @@
+<h3>プライベート</h3>
+<div class="col-md-5 adBox">
+  <h4>素材画像</h4>
+  <% @life_pages.each do |life_pages| %>
+    <table class="table">
+      <tr>
+        <th scope="row">画像1</th>
+        <td><%= image_tag life_pages.life_photo1,class:"resize"%><span class="button"><%= link_to '削除',life_page_path(life_pages.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_life_page_path(life_pages.id)%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像2</th>
+        <td><%= image_tag life_pages.life_photo2,class:"resize"%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像3</th>
+        <td><%= image_tag life_pages.life_photo3,class:"resize"%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像4</th>
+        <td><%= image_tag life_pages.life_photo4,class:"resize"%></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_life_page_path%>
+</div>
+<div class="col-md-6 adBox">
+  <h4>ランキング</h4>
+  <% @life_rankings.each do |life_ranking| %>
+    <table class="table">
+      <tr>
+        <th scope="row">国内 1位</th>
+        <td><%=life_ranking.rank1%><span class="button"><%= link_to '削除',life_ranking_path(life_ranking.id),method: :delete%></span>
+        <span class="button"><%= link_to '編集',edit_life_ranking_path(life_ranking.id)%></td>
+      </tr>
+      <tr>
+        <th scope="row">2位</th>
+        <td><%=life_ranking.rank2%></td>
+      </tr>
+      <tr>
+        <th scope="row">3位</th>
+        <td><%=life_ranking.rank3%></td>
+      </tr>
+      <tr>
+        <th scope="row">国外 1位</th>
+        <td><%=life_ranking.abordrank1%></td>
+      </tr>
+      <tr>
+        <th scope="row">2位</th>
+        <td><%=life_ranking.abordrank2%></td>
+      </tr>
+      <tr>
+        <th scope="row">3位</th>
+        <td><%=life_ranking.abordrank3%></td>
+      </tr>
+    </table>
+  <%end%>
+  <%= link_to '新規作成',new_life_ranking_path%>
+</div>

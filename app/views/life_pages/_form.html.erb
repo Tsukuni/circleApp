@@ -1,0 +1,37 @@
+<%= form_with(model: life_page, local: true) do |form| %>
+  <% if life_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(life_page.errors.count, "error") %> prohibited this life_page from being saved:</h2>
+
+      <ul>
+      <% life_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :life_photo1 %>
+    <%= form.text_field :life_photo1, id: :life_page_life_photo1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :life_photo2 %>
+    <%= form.text_field :life_photo2, id: :life_page_life_photo2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :life_photo3 %>
+    <%= form.text_field :life_photo3, id: :life_page_life_photo3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :life_photo4 %>
+    <%= form.text_field :life_photo4, id: :life_page_life_photo4 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

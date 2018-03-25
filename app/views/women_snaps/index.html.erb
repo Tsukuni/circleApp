@@ -4,9 +4,17 @@
   <% @women_snaps.each do |women_snap| %>
     <table class="table">
       <tr>
-        <th scope="row">画像</th>
+        <th scope="row">画像1</th>
         <td><%= image_tag women_snap.women_image,class:"resize"%><span class="button"><%= link_to '削除',women_snap,method: :delete%></span>
         <span class="button"><%= link_to '編集',edit_women_snap_path(women_snap)%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像2</th>
+        <td><%= image_tag women_snap.women_image2,class:"resize"%></td>
+      </tr>
+      <tr>
+        <th scope="row">画像3</th>
+        <td><%= image_tag women_snap.women_image3,class:"resize"%></td>
       </tr>
       <tr>
         <th scope="row">名前</th>
@@ -22,7 +30,7 @@
       </tr>
       <tr>
         <th scope="row">サークル</th>
-        <td><%= women_snap.circle %>回生</td>
+        <td><%= women_snap.circle %></td>
       </tr>
       <tr>
         <th scope="row">ポイント</th>

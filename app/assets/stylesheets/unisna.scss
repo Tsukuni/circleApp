@@ -1,10 +1,16 @@
 // Place all the styles related to the Unisna controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 @media only screen and (max-width: 900px) {
+
   .unisnaContainer{
     margin-top:20px;
     width:100vw;
+    a:hover{
+      background-color:transparent
+    }
     .mensBox{
       width:100%;
 
@@ -14,7 +20,6 @@
       margin-top:50px;
       margin-bottom:50px;
       border-radius: 5px;
-      background-color: #EEF9FF;
     }
     .mensBox img{
       width:100%;
@@ -27,8 +32,6 @@
     .womenBottom{
       margin-top:50px;
       border-radius: 5px;
-
-      background-color: #F2D8DF;
       margin-bottom:50px;
     }
     .womensBox img{
@@ -37,6 +40,15 @@
     .unisnaBox{
       padding:10px;
     }
+    .uniBox{
+      width:100%
+    }
+    .uniBox img{
+      width:100%
+    }
+  }
+  .detail{
+    margin-left:10%
   }
 
 }
@@ -45,6 +57,9 @@
     margin-top:20px;
     width:100vw;
     display: flex;
+    a:hover{
+      background-color:transparent
+    }
     .mensBox{
       width:40%;
       margin-left:10%;
@@ -54,22 +69,21 @@
       margin-top:50px;
       margin-bottom:50px;
       border-radius: 5px;
-      background-color: #EEF9FF;
-    }
-    .mensBox img{
 
+    }
+
+    .mensBox img{
       width:100%;
     }
+
     .womensBox{
       width:40%;
-
       padding:50px;
     }
+
     .womenBottom{
       margin-top:50px;
       border-radius: 5px;
-
-      background-color: #F2D8DF;
       margin-bottom:50px;
     }
     .womensBox img{
@@ -79,7 +93,16 @@
     .unisnaBox{
       padding:10px;
     }
+    .uniBox{
+      margin-left:20%;
+      width:60%;
+    }
+    .uniBox img{
+      width:100%
+    }
   }
-
-
+  .detail{
+    margin-left:20%;
+    width:60%;
+  }
 }
